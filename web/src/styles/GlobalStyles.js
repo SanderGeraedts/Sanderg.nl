@@ -1,6 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 
-const GlobalStyles = createGlobalStyle`:root {
+const GlobalStyles = createGlobalStyle`
+:root {
     --col-black: #212121;
     --col-pink: #FC5E97;
     --col-gray: #666666;
@@ -8,6 +9,7 @@ const GlobalStyles = createGlobalStyle`:root {
 
     --fw-semi-bold: 600;
   }
+
   html {
     font-size: 20px;
     color: var(--col-black);
@@ -36,6 +38,19 @@ const GlobalStyles = createGlobalStyle`:root {
     display: inline;
     border-bottom: 8px solid var(--col-pink);
     }
-  }`;
+  }
+
+@media (max-width: 460px) {
+    html {
+        font-size: 16px;
+    }
+}  
+
+@media (max-width: 360px) {
+    html {
+        font-size: 14px;
+    }
+}  
+  `;
 
 export default GlobalStyles;

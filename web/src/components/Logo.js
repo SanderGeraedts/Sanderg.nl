@@ -30,6 +30,16 @@ const LogoStyles = styled.div`
     color: var(--col-gray);
     font-weight: var(--fw-semi-bold);
   }
+
+  @media (max-width: 460px) {
+    min-width: initial;
+    width: auto;
+    padding: 10px 20px 0 20px;
+  }
+
+  @media (max-width: 400px) {
+    padding: 5px 5px 0 5px;
+  }
 `;
 
 const Logo = () => {

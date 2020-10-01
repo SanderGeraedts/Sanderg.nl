@@ -10,12 +10,27 @@ const HeaderStyles = styled.nav`
     justify-content: center;
     align-items: center;
     gap: 2rem;
+    margin: 10px 0;
+    padding: 0;
   }
 
   a {
     color: var(--col-black);
     text-decoration: none;
     font-weight: var(--fw-semi-bold);
+  }
+
+  @media (max-width: 1024px) {
+    ul {
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      display: flex;
+      order: -1;
+      flex-basis: 100%;
+      justify-content: center;
+    }
   }
 `;
 
@@ -28,7 +43,7 @@ const Header = () => (
       <li>
         <Link to="/over-mij/">Over mij</Link>
       </li>
-      <li>
+      <li className="logo">
         <Logo />
       </li>
       <li>

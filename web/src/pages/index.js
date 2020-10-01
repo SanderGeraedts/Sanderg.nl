@@ -26,6 +26,10 @@ const IntroStyles = styled.div`
     font-size: 1.3rem;
     margin: 0.5rem 0;
   }
+
+  @media (max-width: 500px) {
+    max-width: calc(100% - 60px);
+  }
 `;
 
 const PortfolioStyles = styled.div`
@@ -37,6 +41,7 @@ const PortfolioStyles = styled.div`
   .portfolios {
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
   }
 
   .portfolio {

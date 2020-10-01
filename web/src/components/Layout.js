@@ -29,15 +29,18 @@ const Layout = ({ children, siteTitle, description, keywords }) => (
     <div>{children}</div>
     <Wrapper>
       <Footer>
-        <a href="https://github.com/SanderGeraedts">
+        <a title="Github" href="https://github.com/SanderGeraedts">
           <RiGithubLine />
         </a>
         |
-        <a href="https://www.instagram.com/luna_the_hufflepuff_retriever/">
+        <a
+          title="Instagram"
+          href="https://www.instagram.com/luna_the_hufflepuff_retriever/"
+        >
           <RiInstagramLine />
         </a>
         |
-        <a href="https://www.linkedin.com/in/sander-geraedts/">
+        <a title="LinkedIn" href="https://www.linkedin.com/in/sander-geraedts/">
           <RiLinkedinFill />
         </a>
       </Footer>
