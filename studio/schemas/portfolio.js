@@ -9,6 +9,12 @@ export default {
       type: "string",
     },
     {
+      name: "featured",
+      title: "Featured",
+      description: "Does this piece need to be displayed on the home page.",
+      type: "boolean",
+    },
+    {
       name: "slug",
       title: "Slug",
       type: "slug",
@@ -68,12 +74,13 @@ export default {
   preview: {
     select: {
       title: "title",
+      featured: "featured",
       publishedAt: "publishedAt",
       image: "logo",
     },
-    prepare({ title = "No title", publishedAt, image }) {
+    prepare({ title = "No title", publishedAt, image, featured }) {
       return {
-        title,
+        title: featured ? `${title} | ⭐` : title,
         subtitle: publishedAt
           ? new Date(publishedAt).toLocaleDateString()
           : "Missing publishing date",

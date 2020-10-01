@@ -47,6 +47,7 @@ const PortfolioStyles = styled.div`
   .portfolio {
     display: flex;
     flex-direction: column;
+    align-items: center;
     text-align: center;
     font-weight: var(--fw-semi-bold);
     color: var(--col-gray);
@@ -126,6 +127,7 @@ export const query = graphql`
     portfolios: allSanityPortfolio(
       limit: 3
       sort: { fields: publishedAt, order: DESC }
+      filter: { featured: { eq: true } }
     ) {
       nodes {
         title

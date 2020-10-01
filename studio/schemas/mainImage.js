@@ -1,18 +1,19 @@
 export default {
-  name: 'mainImage',
-  title: 'Main image',
-  type: 'image',
+  name: "mainImage",
+  title: "Main image",
+  type: "image",
   options: {
-    hotspot: true
+    hotspot: true,
   },
   fields: [
     {
-      name: 'alt',
-      title: 'Alternative text (for screen readers)',
-      type: 'string',
+      name: "alt",
+      title: "Alternative text (for screen readers)",
+      type: "string",
       options: {
-        isHighlighted: true
-      }
-    }
-  ]
-}
+        isHighlighted: true,
+      },
+      validation: (Rule) => Rule.required(),
+    },
+  ],
+};
