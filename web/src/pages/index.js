@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Wrapper from "../components/Wrapper";
 import Img from "gatsby-image";
 import { graphql, Link } from "gatsby";
+import Title from "../components/Title";
 
 const HeroStyles = styled.div`
   position: relative;
@@ -89,9 +90,11 @@ const IndexPage = ({ data }) => {
       </HeroStyles>
       <Wrapper>
         <PortfolioStyles>
+          <Title subtext="Een selectie van mijn meest recente werk.">
+            Mijn werk
+          </Title>
           <div className="title">
-            <h2>Mijn werk</h2>
-            <p>Een selectie van mijn meest recente werk.</p>
+            <p></p>
           </div>
           <div className="portfolios">
             {portfolios.map((portfolio) => (

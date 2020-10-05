@@ -8,6 +8,14 @@
   "engines": {
     "node": "10.x"
   },
+  "eslintConfig": {
+    "extends": [
+      "wesbos"
+    ],
+    "rules": {
+      "react/prop-types": 0
+    }
+  },
   "scripts": {
     "clean": "lerna clean",
     "deploy": "lerna run deploy",

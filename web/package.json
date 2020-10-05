@@ -21,6 +21,14 @@
     "format": "prettier-eslint --write \"**/*.js\" \"!.cache/**\" \"!node_modules/**\" \"!public/**\"",
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
   },
+  "eslintConfig": {
+    "extends": [
+      "wesbos"
+    ],
+    "rules": {
+      "react/prop-types": 0
+    }
+  },
   "dependencies": {
     "@cloudflare/wrangler": "^1.8.4",
     "@sanity/block-content-to-react": "^2.0.7",
