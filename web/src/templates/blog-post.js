@@ -8,26 +8,7 @@ export const query = graphql`
       id
       publishedAt
       mainImage {
-        crop {
-          _key
-          _type
-          top
-          bottom
-          left
-          right
-        }
-        hotspot {
-          _key
-          _type
-          x
-          y
-          height
-          width
-        }
-        asset {
-          _id
-        }
-        alt
+        ...GatsbySanityImageHotspot
       }
       title
       slug {
@@ -44,7 +25,7 @@ const BlogPostTemplate = (props) => {
   return (
     <>
       {errors && <SEO title="GraphQL Error" />}
-      {post && <SEO title={post.title || "Untitled"} />}
+      {post && <SEO title={`${post.title} | Sanderg.nl` || "Sanderg.nl"} />}
       <h2>Dit is een BlogPost</h2>
     </>
   );

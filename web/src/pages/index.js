@@ -4,6 +4,7 @@ import Wrapper from "../components/Wrapper";
 import Img from "gatsby-image";
 import { graphql, Link } from "gatsby";
 import Title from "../components/Title";
+import Image from "../components/Image";
 
 const HeroStyles = styled.div`
   position: relative;
@@ -93,9 +94,6 @@ const IndexPage = ({ data }) => {
           <Title subtext="Een selectie van mijn meest recente werk.">
             Mijn werk
           </Title>
-          <div className="title">
-            <p></p>
-          </div>
           <div className="portfolios">
             {portfolios.map((portfolio) => (
               <Link
@@ -103,10 +101,7 @@ const IndexPage = ({ data }) => {
                 key={portfolio.id}
                 to={`/portfolio/${portfolio.slug.current}`}
               >
-                <Img
-                  fixed={portfolio.logo.asset.fixed}
-                  alt={portfolio.logo.alt}
-                />
+                <Image image={portfolio.logo} width={200} height={200} />
                 <span>{portfolio.title}</span>
               </Link>
             ))}
@@ -118,6 +113,29 @@ const IndexPage = ({ data }) => {
 };
 
 export const query = graphql`
+  fragment GatsbySanityImageHotspot on SanityMainImage {
+    crop {
+      _key
+      _type
+      top
+      bottom
+      left
+      right
+    }
+    hotspot {
+      _key
+      _type
+      x
+      y
+      height
+      width
+    }
+    asset {
+      _id
+    }
+    alt
+  }
+
   query {
     file(relativePath: { eq: "avatar.jpg" }) {
       childImageSharp {
@@ -139,12 +157,7 @@ export const query = graphql`
         }
         id
         logo {
-          alt
-          asset {
-            fixed(height: 200, width: 200) {
-              ...GatsbySanityImageFixed
-            }
-          }
+          ...GatsbySanityImageHotspot
         }
       }
     }

@@ -4,7 +4,7 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
-async function createBlogPostPages(graphql, actions, reporter) {
+const createBlogPostPages = async (graphql, actions, reporter) => {
   const { createPage } = actions;
   const result = await graphql(`
     {
@@ -38,9 +38,9 @@ async function createBlogPostPages(graphql, actions, reporter) {
       context: { id },
     });
   });
-}
+};
 
-async function createSitePages(graphql, actions, reporter) {
+const createSitePages = async (graphql, actions, reporter) => {
   const { createPage } = actions;
   const result = await graphql(`
     {
@@ -73,11 +73,47 @@ async function createSitePages(graphql, actions, reporter) {
       context: { id },
     });
   });
-}
+};
+
+const createPortfolioPages = async (graphql, actions, reporter) => {
+  const { createPage } = actions;
+  const result = await graphql(`
+    {
+      allSanityPortfolio(filter: { slug: { current: { ne: null } } }) {
+        edges {
+          node {
+            id
+            slug {
+              current
+            }
+          }
+        }
+      }
+    }
+  `);
+
+  if (result.errors) throw result.errors;
+
+  const portfolioEdges = (result.data.allSanityPortfolio || {}).edges || [];
+
+  portfolioEdges.forEach((edge) => {
+    const id = edge.node.id;
+    const path = `/portfolio/${edge.node.slug.current}`;
+
+    reporter.info(`Creating Portfolio Page: ${path}`);
+
+    createPage({
+      path,
+      component: require.resolve("./src/templates/portfolio.js"),
+      context: { id },
+    });
+  });
+};
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
   await Promise.all([
     await createBlogPostPages(graphql, actions, reporter),
     await createSitePages(graphql, actions, reporter),
+    await createPortfolioPages(graphql, actions, reporter),
   ]);
 };

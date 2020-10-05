@@ -21,14 +21,6 @@ const PortfoliosPage = ({ data }) => {
 
 export const query = graphql`
   query {
-    file(relativePath: { eq: "avatar.jpg" }) {
-      childImageSharp {
-        fluid(maxHeight: 700) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-
     portfolios: allSanityPortfolio(sort: { fields: publishedAt, order: DESC }) {
       nodes {
         title
@@ -37,12 +29,7 @@ export const query = graphql`
         }
         id
         logo {
-          alt
-          asset {
-            fixed(height: 250, width: 250) {
-              ...GatsbySanityImageFixed
-            }
-          }
+          ...GatsbySanityImageHotspot
         }
         _rawExcerpt
       }

@@ -4,29 +4,10 @@ import SEO from "../components/Seo";
 
 export const query = graphql`
   query PageTemplateQuery($id: String!) {
-    post: sanityPage(id: { eq: $id }) {
+    page: sanityPage(id: { eq: $id }) {
       id
       mainImage {
-        crop {
-          _key
-          _type
-          top
-          bottom
-          left
-          right
-        }
-        hotspot {
-          _key
-          _type
-          x
-          y
-          height
-          width
-        }
-        asset {
-          _id
-        }
-        alt
+        ...GatsbySanityImageHotspot
       }
       title
       slug {
@@ -39,11 +20,11 @@ export const query = graphql`
 
 const PageTemplate = (props) => {
   const { data, errors } = props;
-  const post = data && data.post;
+  const page = data && data.page;
   return (
     <>
       {errors && <SEO title="GraphQL Error" />}
-      {post && <SEO title={post.title || "Untitled"} />}
+      {page && <SEO title={page.title || "Untitled"} />}
       <h2>Dit is een Page</h2>
     </>
   );
