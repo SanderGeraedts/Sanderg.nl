@@ -28,7 +28,6 @@ const LogoStyles = styled.div`
   p {
     margin: 0 10px;
     color: var(--col-gray);
-    font-weight: var(--fw-semi-bold);
   }
 
   @media (max-width: 460px) {
