@@ -8,14 +8,16 @@ const PortfolioStyles = styled.div`
   display: flex;
   margin: 1rem 0;
 
-  .gatsby-image-wrapper {
+  img {
     min-width: 250px;
+    max-height: 250px;
+    align-self: center;
   }
 
   @media (max-width: 650px) {
     flex-wrap: wrap;
 
-    .gatsby-image-wrapper {
+    img {
       margin: 0 auto;
     }
   }
@@ -35,7 +37,10 @@ const PortfolioTextStyles = styled.div`
 
   @media (max-width: 650px) {
     padding: 20px 0;
-    text-align: center;
+
+    h2 {
+      text-align: center;
+    }
   }
 `;
 

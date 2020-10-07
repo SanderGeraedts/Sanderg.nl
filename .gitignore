@@ -1,6 +1,7 @@
 haters/
 
 web/dist
+studio/dist
 
 *.sketch
 *.fig

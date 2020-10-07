@@ -43,7 +43,7 @@ const Title = ({ header, children, subtext }) => {
   }
 
   return (
-    <TitleStyles className="title">
+    <TitleStyles>
       {title}
       <p>{subtext}</p>
     </TitleStyles>

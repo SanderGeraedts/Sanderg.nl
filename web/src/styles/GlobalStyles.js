@@ -8,6 +8,8 @@ const GlobalStyles = createGlobalStyle`
     --col-off-white: #FEFEFE;
 
     --fw-semi-bold: 600;
+
+    --size-width-lg: 1024px;
   }
 
   html {
