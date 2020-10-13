@@ -76,12 +76,7 @@ const OverMijPage = (props) => {
               </a>{" "}
               heb ik ongeveer {distanceKms} km gelopen, in bij elkaar{" "}
               {totalTime.hours} uur, {totalTime.minutes} minuten en{" "}
-              {totalTime.seconds} seconden. Wil je weten hoe ik dit weet? Dat
-              kan je lezen in deze{" "}
-              <Link to="/blog/dynamische-data-met-netlify-functions-in-gatsby/">
-                blog
-              </Link>
-              .
+              {totalTime.seconds} seconden.
             </p>
           </div>
           <Img
