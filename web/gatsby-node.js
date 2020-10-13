@@ -1,8 +1,39 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
+import strava from "strava-v3";
+
+async function createStravaNodes({
+  actions,
+  createNodeId,
+  createContentDigest,
+}) {
+  strava.config({
+    access_token: process.env.STRAVA_ACCESS_TOKEN,
+    client_id: process.env.STRAVA_CLIENT_ID,
+    client_secret: process.env.STRAVA_CLIENT_SECRET,
+  });
+
+  const stravaClient = new strava.client(process.env.STRAVA_ACCESS_TOKEN);
+
+  const payload = await stravaClient.athletes.stats({
+    id: process.env.STRAVA_USER_ID,
+  });
+
+  const nodeMeta = {
+    id: createNodeId("strava-stats"),
+    parent: null,
+
+    internal: {
+      type: "StravaStats",
+      mediaType: "application/json",
+      contentDigest: createContentDigest(payload),
+    },
+  };
+  actions.createNode({ ...payload, ...nodeMeta });
+}
+
+export async function sourceNodes(params) {
+  // Fetch a Strava Stats and Source into Gatsby
+  await Promise.all([createStravaNodes(params)]);
+}
 
 const createBlogPostPages = async (graphql, actions, reporter) => {
   const { createPage } = actions;

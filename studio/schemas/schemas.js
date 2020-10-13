@@ -13,6 +13,7 @@ import page from "./page";
 import post from "./post";
 import siteSettings from "./siteSettings";
 import portfolio from "./portfolio";
+import tools from "./tools";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -31,6 +32,7 @@ export default createSchema({
     portfolio,
     post,
     siteSettings,
+    tools,
 
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
