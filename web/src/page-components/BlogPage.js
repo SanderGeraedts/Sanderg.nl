@@ -1,20 +1,19 @@
 import React from "react";
 import Wrapper from "../components/Wrapper";
-import Title from "../components/Title";
 import BlockContent from "../components/sanity-blocks/block-content";
 import HeroImage from "../components/HeroImage";
 
-const PortfolioPage = ({ portfolio }) => {
+const BlogPage = ({ blog }) => {
   return (
     <>
-      <HeroImage image={portfolio.mainImage}>
-        <Title header="h1">{portfolio.title}</Title>
+      <HeroImage image={blog.mainImage}>
+        <h1>{blog.title}</h1>
       </HeroImage>
       <Wrapper>
-        <BlockContent blocks={portfolio._rawBody} />
+        <BlockContent blocks={blog._rawBody} />
       </Wrapper>
     </>
   );
 };
 
-export default PortfolioPage;
+export default BlogPage;

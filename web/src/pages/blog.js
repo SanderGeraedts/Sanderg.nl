@@ -4,7 +4,6 @@ import { mapEdgesToNodes } from "../lib/helpers";
 import Wrapper from "../components/Wrapper";
 import GraphQLErrorList from "../components/sanity-blocks/graphql-error-list";
 import SEO from "../components/Seo";
-import { format } from "date-fns";
 
 export const query = graphql`
   query BlogPageQuery {
@@ -47,18 +46,17 @@ const BlogPage = (props) => {
       <SEO title="Blog" />
       <Wrapper>
         <h1>Blog</h1>
-        {postNodes &&
-          postNodes.length > 0 &&
-          postNodes.map((post) => {
-            const dateSegment = format(post.publishedAt, "YYYY/MM");
-            return (
-              <li>
-                <Link to={`/nieuws/${dateSegment}/${post.slug.current}`}>
-                  {post.title}
-                </Link>
-              </li>
-            );
-          })}
+        <ul>
+          {postNodes &&
+            postNodes.length > 0 &&
+            postNodes.map((post) => {
+              return (
+                <li>
+                  <Link to={`/blog/${post.slug.current}`}>{post.title}</Link>
+                </li>
+              );
+            })}
+        </ul>
       </Wrapper>
     </>
   );

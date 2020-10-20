@@ -1,14 +1,21 @@
 import React from "react";
 import { graphql } from "gatsby";
 import SEO from "../components/Seo";
+import Wrapper from "../components/Wrapper";
+import BlogPage from "../page-components/BlogPage";
 
 export const query = graphql`
   query BlogPostTemplateQuery($id: String!) {
-    post: sanityPost(id: { eq: $id }) {
+    blog: sanityPost(id: { eq: $id }) {
       id
       publishedAt
       mainImage {
-        ...GatsbySanityImageHotspot
+        alt
+        asset {
+          fluid(maxWidth: 2000) {
+            ...GatsbySanityImageFluid
+          }
+        }
       }
       title
       slug {
@@ -21,12 +28,14 @@ export const query = graphql`
 
 const BlogPostTemplate = (props) => {
   const { data, errors } = props;
-  const post = data && data.post;
+  const blog = data && data.blog;
   return (
     <>
       {errors && <SEO title="GraphQL Error" />}
-      {post && <SEO title={`${post.title} | Sanderg.nl` || "Sanderg.nl"} />}
-      <h2>Dit is een BlogPost</h2>
+      {blog && <SEO title={blog.title} />}
+      <Wrapper>
+        <BlogPage blog={blog} />
+      </Wrapper>
     </>
   );
 };
