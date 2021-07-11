@@ -9,10 +9,11 @@
   --size-width-lg: 1024px;
 }
 
-html {
+html,
+body {
   font-size: 20px;
   color: var(--col-black);
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
 }

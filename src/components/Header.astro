@@ -1,0 +1,53 @@
+---
+import Logo from "./Logo.astro";
+---
+<nav>
+    <ul>
+        <li>
+            <a href="/">Home</a>
+        </li>
+        <li>
+            <a href="/blog/over-mij/">Blog</a>
+        </li>
+        <li class="logo">
+            <Logo />
+        </li>
+        <li>
+            <a href="/portfolio/">Portfolio</a>
+        </li>
+        <li>
+            <a href="/contact/">Contact</a>
+        </li>
+    </ul>
+</nav>
+
+<style>
+ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin: 10px 0;
+    padding: 0;
+}
+
+a {
+color: var(--col-black);
+text-decoration: none;
+font-weight: var(--fw-semi-bold);
+}
+
+@media (max-width: 1024px) {
+ul {
+    flex-wrap: wrap;
+}
+
+.logo {
+    display: flex;
+    order: -1;
+    flex-basis: 100%;
+    justify-content: center;
+}
+}
+</style>

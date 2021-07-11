@@ -1,7 +1,9 @@
 ---
 // Component Imports
-import Tour from '../components/Tour.astro';
 import HeadBase from '../components/HeadBase.astro';
+import Header from '../components/Header.astro';
+import HeroImage from "../components/HeroImage.astro";
+import Wrapper from "../components/Wrapper.astro";
 
 // Component Script:
 // You can write any JavaScript/TypeScript that you'd like here.
@@ -17,15 +19,31 @@ let title = 'My Astro Site';
     <HeadBase description="Hey, ik ben Sander Geraedts. Front-end Developer bij Sogeti, hardloper, en baasje van de veel te schattige puppy Luna." permalink="https://sanderg.nl/"/>
 </head>
 <body>
+    <Header />
     <main>
-        <header>
-            <div>
-                <img width="60" height="80" src="/assets/logo.svg" alt="Astro logo">
-                <h1>Welcome to <a href="https://astro.build/">Astro</a></h1>
-            </div>
-        </header>
-
-        <Tour />
+        <HeroImage src="/assets/images/avatar.jpg" alt="close-up van Sander Geraedts die zijn medaille voor de Halve Marathon van Eindhoven omhoog houdt">
+            <h1 class="intro-title">Hey, ik ben Sander</h1>
+            <p class="intro">
+              Front-end Developer bij <a href="https://sogeti.nl/">Sogeti</a>,
+              hardloper, en baasje van de veel te schattige
+              {new Date() > new Date("2021-02-13")
+                ? "golden retriever"
+                : "puppy"}{" "}
+              <a href="https://www.instagram.com/luna_the_hufflepuff_retriever/">Luna</a>.
+            </p>
+        </HeroImage>
     </main>
 </body>
 </html>
+
+<style>
+.intro-title {
+
+}
+
+.intro {
+    font-size: 1.3rem;
+    margin: 0.5rem 0;
+}
+
+</style>

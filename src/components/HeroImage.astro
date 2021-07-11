@@ -1,0 +1,47 @@
+---
+import Wrapper from "./Wrapper.astro";
+
+export interface Props {
+  src: string;
+  alt: string;
+}
+const { src, alt } = Astro.props;
+---
+
+<div class="hero">
+    {src && <img src={src} alt={alt} loading="lazy">}
+    <Wrapper>
+    <div class="intro">
+        <slot />
+    </div>
+    </Wrapper>
+</div>
+
+<style>
+.hero {
+    position: relative;
+    max-height: 80vh;
+    overflow: hidden;
+}
+
+img {
+    width: 100%;
+    opacity: 0.4;
+}
+
+.intro {
+    max-width: 500px;
+    z-index: 10;
+    position: absolute;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.75);
+    border-radius: 25px 25px 0 0;
+    padding: 20px;
+}
+
+@media (max-width: 500px) {
+    .intro {
+        max-width: calc(100% - 60px);
+    }
+}
+</style>

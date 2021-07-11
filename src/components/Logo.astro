@@ -1,0 +1,55 @@
+---
+
+---
+<div class="logo">
+    <h1>
+        <a href="/">Sander Geraedts</a>
+    </h1>
+    <div class="divider"></div>
+    <p>Frontend nerd met een passie voor design</p>
+</div>
+
+<style>
+.logo{
+display: flex;
+flex-direction: column;
+text-align: center;
+min-width: 440px;
+max-width: 500px;
+}
+
+h1 {
+font-size: 2rem;
+margin: 0;
+}
+
+a {
+color: var(--col-black);
+text-decoration: none;
+}
+
+.divider {
+width: 100%;
+height: 5px;
+background: var(--col-pink);
+}
+
+p {
+margin: 0 10px;
+color: var(--col-gray);
+}
+
+@media (max-width: 460px) {
+    .logo{
+        min-width: initial;
+        width: auto;
+        padding: 10px 20px 0 20px;
+    }
+}
+
+@media (max-width: 400px) {
+    .logo{
+        padding: 5px 5px 0 5px;
+    }
+}
+</style>
