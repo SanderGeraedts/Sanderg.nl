@@ -1,39 +1,12 @@
 {
-  "private": false,
-  "name": "groningen-griffins-sanity",
-  "description": "Sander Geraedts' personal portfolio website",
-  "version": "0.1.0",
-  "license": "MIT",
-  "author": "Sander Geraedts <info@sanderg.nl>",
-  "engines": {
-    "node": "10.x"
-  },
-  "eslintConfig": {
-    "extends": [
-      "wesbos"
-    ],
-    "rules": {
-      "react/prop-types": 0
-    }
-  },
+  "name": "@example/starter",
+  "version": "0.0.1",
+  "private": true,
   "scripts": {
-    "clean": "lerna clean",
-    "deploy": "lerna run deploy",
-    "empty-cache": "lerna run empty-cache",
-    "init": "cd studio && sanity init && lerna run graphql-deploy",
-    "format": "lerna run format",
-    "graphql-deploy": "lerna run graphql-deploy",
-    "lint": "lerna run lint",
-    "now-deploy": "now && now alias",
-    "workers-start": "lerna run workers-start",
-    "workers-deploy": "lerna run workers-deploy",
-    "postinstall": "lerna bootstrap",
-    "sanity-deploy": "lerna run sanity-deploy",
-    "start": "lerna run empty-cache && lerna run start --parallel",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "astro dev",
+    "build": "astro build"
   },
   "devDependencies": {
-    "lerna": "^3.22.1",
-    "rimraf": "^2.6.3"
+    "astro": "^0.16.1"
   }
 }
