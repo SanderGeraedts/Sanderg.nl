@@ -1,45 +1,76 @@
 ---
 // Component Imports
 import HeadBase from '../components/HeadBase.astro';
+import Layout from '../layouts/layout.astro';
 import Header from '../components/Header.astro';
 import HeroImage from "../components/HeroImage.astro";
+import Title from '../components/Title.astro';
 import Wrapper from "../components/Wrapper.astro";
-
-// Component Script:
-// You can write any JavaScript/TypeScript that you'd like here.
-// It will run during the build, but never in the browser.
-// All variables are available to use in the HTML template below.
-let title = 'My Astro Site';
-
-// Full Astro Component Syntax:
-// https://github.com/snowpackjs/astro/blob/main/docs/core-concepts/astro-components.md
 ---
-<html lang="en">
-<head>
-    <HeadBase description="Hey, ik ben Sander Geraedts. Front-end Developer bij Sogeti, hardloper, en baasje van de veel te schattige puppy Luna." permalink="https://sanderg.nl/"/>
-</head>
-<body>
-    <Header />
-    <main>
-        <HeroImage src="/assets/images/avatar.jpg" alt="close-up van Sander Geraedts die zijn medaille voor de Halve Marathon van Eindhoven omhoog houdt">
-            <h2 class="h1">Hey, ik ben Sander</h2>
-            <p class="intro">
-              Front-end Developer bij <a href="https://sogeti.nl/">Sogeti</a>,
-              hardloper, en baasje van de veel te schattige
-              {new Date() > new Date("2021-02-13")
-                ? "golden retriever"
-                : "puppy"}{" "}
-              <a href="https://www.instagram.com/luna_the_hufflepuff_retriever/">Luna</a>.
-            </p>
-        </HeroImage>
-    </main>
-</body>
-</html>
+
+<Layout description="Hey, ik ben Sander Geraedts. Front-end Developer bij Sogeti, hardloper, en baasje van de veel te schattige puppy Luna." permalink="https://sanderg.nl/">
+    <HeroImage src="/assets/images/avatar.jpg" alt="close-up van Sander Geraedts die zijn medaille voor de Halve Marathon van Eindhoven omhoog houdt">
+        <h2 class="h1">Hey, ik ben Sander</h2>
+        <p class="intro">
+            Front-end Developer bij <a href="https://sogeti.nl/">Sogeti</a>,
+            hardloper, en baasje van de veel te schattige <span title="Ze is over een jaar, maar blijft mijn pup.">"pup"</span>{" "}
+            <a href="https://www.instagram.com/luna_the_hufflepuff_retriever/">Luna</a>.
+        </p>
+    </HeroImage>
+    <Wrapper>
+        <div class="about">
+            <div class="content">
+                <Title title="Over mij">Even kort voorstellen, wel zo netjes.</Title>
+                <p>
+                Hey, mijn naam is Sander Geraedts. Ik ben een Front-end Developer
+                uit Veendam en werk op dit moment voor{" "}
+                <a href="https://abnamro.nl/">ABN AMRO</a> , in opdracht van{" "}
+                <a href="https://sogeti.nl/">Sogeti</a>.
+                </p>
+                <p>
+                In mijn vrije tijd ben ik bezig om het quidditch team, de
+                Groningen Griffins, op te zetten. Daarnaast hou ik enorm van hardlopen. Volgens mijn{" "}
+                <a href="https://www.strava.com/athletes/43070778">
+                    Strava profiel
+                </a>{" "}
+                heb ik ongeveer 2012.5 km gelopen.
+                </p>
+            </div>
+            <img src="/assets/images/linkedInAvatar.jpg" alt="Afbeelding van Sander Geraedts in een net pak">
+        </div>
+    </Wrapper>
+</Layout>
 
 <style>
 .intro {
-    font-size: 1.3rem;
-    margin: 0.5rem 0;
+    margin: 0;
 }
+
+.about {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin: 1rem 0;
+}
+
+.content p:first-child {
+    margin-top: 0;
+}
+
+.about img {
+    max-width: 300px;
+    border-radius: 25px;
+}
+
+@media (max-width: 750px) {
+    .about {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .about img {
+      order: -1;
+    }
+  }
 
 </style>
