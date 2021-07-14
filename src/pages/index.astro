@@ -38,6 +38,17 @@ import Wrapper from "../components/Wrapper.astro";
             </div>
             <img src="/assets/images/linkedInAvatar.jpg" alt="Afbeelding van Sander Geraedts in een net pak">
         </div>
+        <div class="tech">
+            <h3>Technologie</h3>
+            <p class="mt-0">In mijn dagelijks werk gebruik ik onder andere de volgende tools:</p>
+            <ul>
+                <li><img src="/assets/images/Vue-logo.svg" alt="Vue Logo" /><p>Vue</p></li>
+                <li><img src="/assets/images/Nodejs-logo.svg" alt="Nodejs Logo" /><p>Nodejs</p></li>
+                <li><img src="/assets/images/React-logo.svg" alt="React Logo" /><p>React</p></li>
+                <li><img src="/assets/images/JS-logo.svg" alt="JS Logo" /><p>Javascript</p></li>
+                <li><img src="/assets/images/Figma-logo.svg" alt="Figma Logo" /><p>Figma</p></li>
+            </ul>
+        </div>
     </Wrapper>
 </Layout>
 
@@ -71,6 +82,36 @@ import Wrapper from "../components/Wrapper.astro";
     .about img {
       order: -1;
     }
-  }
+}
+
+.tech ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.tech li {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 200px;
+    margin-block: 1rem;
+}
+
+.tech img{
+    max-height: 150px;
+    max-width: 150px;
+    width: 100%;
+}
+
+.tech li p {
+    text-align: center;
+    margin: 0;
+    font-weight: 600;
+}
 
 </style>
