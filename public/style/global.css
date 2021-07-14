@@ -80,6 +80,19 @@ code {
   padding-inline: 0.25rem;
 }
 
+.col-gray {
+  color: var(--col-gray);
+}
+
+.i {
+  font-style: italic;
+}
+
+.tooltip {
+  text-decoration-line: underline;
+  text-decoration-style: dashed;
+}
+
 .m-0 {
   margin: 0;
 }
