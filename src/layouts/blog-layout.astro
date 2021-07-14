@@ -1,0 +1,17 @@
+---
+import { Markdown } from 'astro/components';
+import HeadBase from '../components/HeadBase.astro';
+import Wrapper from '../components/Wrapper.astro';
+import Layout from '../layouts/layout.astro';
+
+const {content} = Astro.props;
+const {title, description, publishDate, author, heroImage, permalink} = content;
+---
+
+<Layout title={`${title} - Sanderg.nl`} description={description} permalink={permalink}>
+    <Wrapper>
+    <div class="mt-2">
+        <slot />
+    </div>
+    </Wrapper>
+</Layout>

@@ -169,3 +169,23 @@ a {
   margin-bottom: 1rem;
   margin-block: 1rem;
 }
+
+.d-inline {
+  display: inline;
+}
+
+.d-block {
+  display: block;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.d-grid {
+  display: grid;
+}
+
+.fw-600 {
+  font-weight: 600;
+}

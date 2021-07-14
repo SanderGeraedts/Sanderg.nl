@@ -1,0 +1,41 @@
+---
+export interface Props {
+  post: any;
+}
+
+const { post } = Astro.props;
+---
+
+<article class="postPreview">
+    <header>
+        <a href={post.url}><h2 class="title">{post.title}</h2></a>
+        <p class="publishDate">{post.publishDate}</p>
+    </header>
+    <main>
+        <p>
+        {post.description}{" "}<a class="d-inline fw-600" href={post.url}>Verder lezen</a>
+        </p>
+    </main>
+</article>
+
+<style>
+a {
+    color: var(--col-black);
+    text-decoration-color: var(--col-pink);
+    transition: color 0.12s ease-in-out;
+}
+
+a:hover {
+    color: var(--col-pink);
+}
+
+.publishDate {
+    font-style: italic;
+    margin-top: 0;
+    color: var(--col-gray);
+}
+
+header h2 {
+    margin-bottom: -0.25rem;
+}
+</style>

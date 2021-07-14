@@ -1,0 +1,18 @@
+---
+import Layout from '../layouts/layout.astro';
+import Title from '../components/Title.astro';
+import BlogItem from "../components/BlogItem.astro";
+import Wrapper from "../components/Wrapper.astro";
+
+// Data Fetching: List all Markdown posts in the repo.
+let allPosts = Astro.fetchContent('./posts/*.md');
+allPosts = allPosts.sort((a, b) => new Date(b.publishDate) - new Date(a.publishDate));
+---
+<Layout title="Blog - Sanderg.nl" description="Hey, ik ben Sander Geraedts. Front-end Developer bij Sogeti, hardloper, en baasje van de veel te schattige puppy Luna." permalink="https://sanderg.nl/">
+    <Wrapper>
+        <Title title="Blog">Een plek zodat andere kunnen leren van mijn fouten.</Title>
+        <div class="posts">
+            {allPosts.map(p => <BlogItem post={p} />)}
+        </div>
+    </Wrapper>
+</Layout>

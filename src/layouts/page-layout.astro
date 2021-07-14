@@ -1,0 +1,17 @@
+---
+import { Markdown } from 'astro/components';
+import HeadBase from '../components/HeadBase.astro';
+import Title from '../components/Title.astro';
+import Wrapper from '../components/Wrapper.astro';
+import Layout from '../layouts/layout.astro';
+
+const {content} = Astro.props;
+const {title, subtext, description, publishDate, author, heroImage, permalink} = content;
+---
+
+<Layout title={`${title} - Sanderg.nl`} description={description} permalink={permalink}>
+    <Wrapper>
+        <Title title={title} header="h1">{subtext}</Title>
+        <slot />
+    </Wrapper>
+</Layout>
