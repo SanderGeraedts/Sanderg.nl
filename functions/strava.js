@@ -4,6 +4,9 @@ const { STRAVA_CLIENT_ID, STRAVA_CLIENT_SECRET, STRAVA_REFRESH_TOKEN, STRAVA_ACC
 const API_ENDPOINT = 'https://www.strava.com/api/v3/';
 
 const refreshToken = async () => {
+  const url = `${API_ENDPOINT}/oauth/token`;
+
+  console.log(`Calling ${url}...`);
   return fetch(`${API_ENDPOINT}/oauth/token`, {
     headers: {
       client_id: STRAVA_CLIENT_ID,
@@ -24,6 +27,10 @@ const refreshToken = async () => {
 };
 
 const getStravaStats = async (access_token) => {
+  const url = `${API_ENDPOINT}/athletes/${STRAVA_USER_ID}/stats`;
+
+  console.log(`Calling ${url}...`);
+
   return fetch(`${API_ENDPOINT}/athletes/${STRAVA_USER_ID}/stats`, { headers: { Authorization: `Bearer ${access_token}` } })
     .then((response) => response.json())
     .then((data) => ({
@@ -35,9 +42,12 @@ const getStravaStats = async (access_token) => {
 
 exports.handler = async (event, context) => {
   const currentTime = Math.floor(Date.now() / 1000);
+  console.log('Exporting Handler...');
   if (currentTime >= STRAVA_EXPIRES_AT) {
+    console.log('refreshing token...');
     return refreshToken();
   } else {
+    console.log('Getting Strava Stats...');
     return getStravaStats(STRAVA_ACCESS_TOKEN);
   }
 };
