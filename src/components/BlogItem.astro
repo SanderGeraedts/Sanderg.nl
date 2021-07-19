@@ -1,15 +1,18 @@
 ---
 export interface Props {
-  post: any;
+    post: any;
 }
 
 const { post } = Astro.props;
+
+const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+const publishDate = new Date(post.publishDate);
 ---
 
 <article class="postPreview">
     <header>
         <a href={post.url}><h2 class="title">{post.title}</h2></a>
-        <p class="publishDate">{post.publishDate}</p>
+        <p class="publishDate">{publishDate.toLocaleDateString('nl-NL', options)}</p>
     </header>
     <main>
         <p>
@@ -19,20 +22,14 @@ const { post } = Astro.props;
 </article>
 
 <style>
-a {
-    color: var(--col-black);
-    text-decoration-color: var(--col-pink);
-    transition: color 0.12s ease-in-out;
-}
-
-a:hover {
-    color: var(--col-pink);
-}
-
 .publishDate {
     font-style: italic;
     margin-top: 0;
     color: var(--col-gray);
+}
+
+.publishDate:first-letter {
+    text-transform: capitalize;
 }
 
 header h2 {
