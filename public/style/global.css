@@ -69,6 +69,10 @@ a:hover {
   color: var(--col-pink);
 }
 
+img {
+  max-width: 100%;
+}
+
 @media (max-width: 460px) {
   html {
     font-size: 16px;

@@ -7,9 +7,14 @@ import Layout from '../layouts/layout.astro';
 const {content} = Astro.props;
 const {title, description, publishDate, author, heroImage, permalink} = content;
 const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+
+function removeTags(string) {
+    const regex = /(<([^>]+)>)/ig
+    return string.replace(regex, "")
+}
 ---
 
-<Layout title={`${title} - Sanderg.nl`} description={description} permalink={permalink}>
+<Layout title={`${removeTags(title)} - Sanderg.nl`} description={description} permalink={permalink}>
     <Wrapper>
     <div class="mt-2">
         <header>
