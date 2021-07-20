@@ -21,6 +21,9 @@ const refreshToken = async () => {
       process.env.STRAVA_ACCESS_TOKEN = data.access_token;
       process.env.STRAVA_EXPIRES_AT = data.expires_at;
       process.env.STRAVA_REFRESH_TOKEN = data.refresh_token;
+      
+      console.log(data);
+      
       getStravaStats(data.access_token);
     })
     .catch((error) => ({ statusCode: 422, body: String(error) }));
