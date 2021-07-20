@@ -52,7 +52,7 @@ exports.handler = async (event, context) => {
 
   console.log('Exporting Handler...');
   console.log(`Current time: ${currentTime}`);
-  console.log(`Strava Expires: ${token.expires_at}`);
+  console.log(`Strava Expires: ${token.data.expires_at}`);
   if (currentTime >= token.data.expires_at) {
     return refreshToken();
   } else {
