@@ -7,13 +7,7 @@ const refreshToken = async () => {
   const url = `${API_ENDPOINT}/oauth/token`;
 
   console.log(`Calling ${url}...`);
-  return fetch(`${API_ENDPOINT}/oauth/token`, {
-    headers: {
-      client_id: STRAVA_CLIENT_ID,
-      client_secret: STRAVA_CLIENT_SECRET,
-      grant_type: 'refresh_token',
-      refresh_token: STRAVA_REFRESH_TOKEN,
-    },
+  return fetch(`https://www.strava.com/oauth/token?client_id=${STRAVA_CLIENT_ID}&client_secret=${STRAVA_CLIENT_SECRET}&refresh_token=${STRAVA_REFRESH_TOKEN}&grant_type=refresh_token`, {
     method: 'POST',
   })
     .then((response) => response.json())
