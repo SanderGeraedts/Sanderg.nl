@@ -1,23 +1,44 @@
 const fetch = require('node-fetch');
-const { STRAVA_CLIENT_ID, STRAVA_CLIENT_SECRET, STRAVA_REFRESH_TOKEN, STRAVA_ACCESS_TOKEN, STRAVA_USER_ID, STRAVA_EXPIRES_AT } = process.env;
+const faunadb = require('faunadb');
+const query = faunadb.query;
+const { STRAVA_CLIENT_ID, STRAVA_CLIENT_SECRET, STRAVA_USER_ID, FAUNA_SECRET } = process.env;
 
 const API_ENDPOINT = 'https://www.strava.com/api/v3';
 
-const refreshToken = async () => {
-  const url = `${API_ENDPOINT}/oauth/token`;
+const client = new faunadb.Client({ secret: FAUNA_SECRET });
 
-  console.log(`Calling ${url}...`);
-  return fetch(`https://www.strava.com/oauth/token?client_id=${STRAVA_CLIENT_ID}&client_secret=${STRAVA_CLIENT_SECRET}&refresh_token=${STRAVA_REFRESH_TOKEN}&grant_type=refresh_token`, {
-    method: 'POST',
-  })
+const refreshToken = async () => {
+  return fetch(
+    `https://www.strava.com/oauth/token?client_id=${STRAVA_CLIENT_ID}&client_secret=${STRAVA_CLIENT_SECRET}&refresh_token=${STRAVA_REFRESH_TOKEN}&grant_type=refresh_token`,
+    {
+      method: 'POST',
+    }
+  )
     .then((response) => response.json())
     .then((data) => {
-      process.env.STRAVA_ACCESS_TOKEN = data.access_token;
-      process.env.STRAVA_EXPIRES_AT = data.expires_at;
-      process.env.STRAVA_REFRESH_TOKEN = data.refresh_token;
-      
+      if (data.errors) {
+        return {
+          statusCode: 500,
+          body: JSON.stringify(data),
+        };
+      }
+
+      client
+        .query(
+          query.Create(query.Collection('tokens'), {
+            data: {
+              access_token: data.access_token,
+              expires_at: data.expires_at,
+              refresh_token: data.refresh_token,
+            },
+          })
+        )
+        .then((response) => {
+          console.log(response.ref);
+        });
+
       console.log(data);
-      
+
       getStravaStats(data.access_token);
     })
     .catch((error) => ({ statusCode: 422, body: String(error) }));
