@@ -8,32 +8,29 @@ const API_ENDPOINT = 'https://www.strava.com/api/v3';
 const client = new faunadb.Client({ secret: FAUNA_SECRET });
 
 const refreshToken = async () => {
-  return fetch(
+  const response = await fetch(
     `https://www.strava.com/oauth/token?client_id=${STRAVA_CLIENT_ID}&client_secret=${STRAVA_CLIENT_SECRET}&refresh_token=${STRAVA_REFRESH_TOKEN}&grant_type=refresh_token`,
     {
       method: 'POST',
     }
-  )
-    .then((response) => response.json())
-    .then((data) => {
-      if (data.errors) {
-        return {
-          statusCode: 500,
-          body: JSON.stringify(data),
-        };
-      }
+  );
+  const data = await response.json();
+  if (data.errors) {
+    return {
+      statusCode: 500,
+      body: JSON.stringify(data),
+    };
+  }
 
-      const result = await client.query(
-        q.Create(q.Collection('tokens'), {
-          data,
-        })
-      );
-
-      console.log(result);
-
-      getStravaStats(data.access_token);
+  const result = await client.query(
+    q.Create(q.Collection('tokens'), {
+      data,
     })
-    .catch((error) => ({ statusCode: 422, body: String(error) }));
+  );
+
+  console.log(result);
+
+  getStravaStats(data.access_token);
 };
 
 const getStravaStats = async (access_token) => {
