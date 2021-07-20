@@ -43,6 +43,8 @@ const getStravaStats = async (access_token) => {
 exports.handler = async (event, context) => {
   const currentTime = Math.floor(Date.now() / 1000);
   console.log('Exporting Handler...');
+  console.log(`Current time: ${currentTime}`);
+  console.log(`Strava Expires: ${STRAVA_EXPIRES_AT}`);
   if (currentTime >= STRAVA_EXPIRES_AT) {
     console.log('refreshing token...');
     return refreshToken();
