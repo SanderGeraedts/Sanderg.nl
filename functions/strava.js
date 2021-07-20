@@ -60,6 +60,7 @@ const getStravaStats = async (access_token) => {
 
 exports.handler = async (event, context) => {
   const currentTime = Math.floor(Date.now() / 1000);
+  const STRAVA_EXPIRES_AT = Math.floor(Date.now() / 1000) - 10;
   console.log('Exporting Handler...');
   console.log(`Current time: ${currentTime}`);
   console.log(`Strava Expires: ${STRAVA_EXPIRES_AT}`);
