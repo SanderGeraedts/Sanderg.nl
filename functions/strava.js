@@ -30,7 +30,7 @@ const refreshToken = async () => {
 
   console.log(result);
 
-  getStravaStats(data.access_token);
+  return getStravaStats(data.access_token);
 };
 
 const getStravaStats = async (access_token) => {
