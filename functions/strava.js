@@ -1,7 +1,7 @@
 const fetch = require('node-fetch');
 const { STRAVA_CLIENT_ID, STRAVA_CLIENT_SECRET, STRAVA_REFRESH_TOKEN, STRAVA_ACCESS_TOKEN, STRAVA_USER_ID, STRAVA_EXPIRES_AT } = process.env;
 
-const API_ENDPOINT = 'https://www.strava.com/api/v3/';
+const API_ENDPOINT = 'https://www.strava.com/api/v3';
 
 const refreshToken = async () => {
   const url = `${API_ENDPOINT}/oauth/token`;
