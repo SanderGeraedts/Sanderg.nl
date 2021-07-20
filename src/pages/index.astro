@@ -9,8 +9,9 @@ import Wrapper from "../components/Wrapper.astro";
 const response = await fetch('https://sanderg.nl/.netlify/functions/strava');
 const data = await response.json();
 
-const totalRuns = data.all_run_totals.count
-const totalDistance = Math.floor(data.all_run_totals.distance / 100) / 10;
+console.log(data);
+
+const totalDistance = 2027.1 // Math.floor(data.all_run_totals.distance / 100) / 10;
 ---
 
 <Layout description="Hey, ik ben Sander Geraedts. Front-end Developer bij Sogeti, hardloper, en baasje van de veel te schattige puppy Luna." permalink="https://sanderg.nl/">
@@ -38,7 +39,7 @@ const totalDistance = Math.floor(data.all_run_totals.distance / 100) / 10;
                 <a href="https://www.strava.com/athletes/43070778">
                     Strava profiel
                 </a>{" "}
-                ben ik ongeveer {totalRuns}x wezen hardlopen, wat in totaal {totalDistance} km is geweest.
+                heb ik zo'n {totalDistance} km wezen hardlopen.
                 </p>
             </div>
             <img src="/assets/images/linkedInAvatar.jpg" alt="Afbeelding van Sander Geraedts in een net pak">
