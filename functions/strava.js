@@ -1,6 +1,6 @@
 const fetch = require('node-fetch');
 const faunadb = require('faunadb');
-const query = faunadb.query;
+const q = faunadb.query;
 const { STRAVA_CLIENT_ID, STRAVA_REFRESH_TOKEN, STRAVA_CLIENT_SECRET, STRAVA_USER_ID, FAUNA_SECRET } = process.env;
 
 const API_ENDPOINT = 'https://www.strava.com/api/v3';
@@ -23,21 +23,13 @@ const refreshToken = async () => {
         };
       }
 
-      client
-        .query(
-          query.Create(query.Collection('tokens'), {
-            data: {
-              access_token: data.access_token,
-              expires_at: data.expires_at,
-              refresh_token: data.refresh_token,
-            },
-          })
-        )
-        .then((response) => {
-          console.log(response.ref);
-        });
+      const result = await client.query(
+        q.Create(q.Collection('tokens'), {
+          data,
+        })
+      );
 
-      console.log(data);
+      console.log(result);
 
       getStravaStats(data.access_token);
     })
