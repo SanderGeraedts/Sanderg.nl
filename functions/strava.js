@@ -10,8 +10,10 @@ const client = new faunadb.Client({ secret: FAUNA_SECRET });
 const refreshToken = async () => {
   console.log('refreshing token...');
 
+  const token = await client.query(q.Get(q.Ref(q.Collection('tokens'), TOKEN_REF)));
+
   const response = await fetch(
-    `https://www.strava.com/oauth/token?client_id=${STRAVA_CLIENT_ID}&client_secret=${STRAVA_CLIENT_SECRET}&refresh_token=${STRAVA_REFRESH_TOKEN}&grant_type=refresh_token`,
+    `https://www.strava.com/oauth/token?client_id=${STRAVA_CLIENT_ID}&client_secret=${STRAVA_CLIENT_SECRET}&refresh_token=${token.data.refresh_token}&grant_type=refresh_token`,
     {
       method: 'POST',
     }
