@@ -1,7 +1,7 @@
 const fetch = require('node-fetch');
 const faunadb = require('faunadb');
 const query = faunadb.query;
-const { STRAVA_CLIENT_ID, STRAVA_CLIENT_SECRET, STRAVA_USER_ID, FAUNA_SECRET } = process.env;
+const { STRAVA_CLIENT_ID, STRAVA_REFRESH_TOKEN, STRAVA_CLIENT_SECRET, STRAVA_USER_ID, FAUNA_SECRET } = process.env;
 
 const API_ENDPOINT = 'https://www.strava.com/api/v3';
 
