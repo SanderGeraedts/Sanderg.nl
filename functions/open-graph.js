@@ -36,8 +36,6 @@ exports.handler = async (event, context) => {
 
   const cloudinaryResponse = await uploadToCloudinary(screenshot);
 
-  console.log(cloudinaryResponse);
-
   console.log(`Created screenshot of ${pageToScreenshot}`);
   return {
     statusCode: 200,

@@ -22,6 +22,8 @@ const uploadToCloudinary = async (screenshot) => {
 exports.handler = async (event, context) => {
   const screenshot = JSON.parse(event.body).screenshot;
 
+  console.log(screenshot);
+
   const cloudinaryResponse = await uploadToCloudinary(screenshot);
 
   return {
