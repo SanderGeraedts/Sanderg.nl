@@ -4,6 +4,7 @@ exports.handler = async (event, context) => {
   const pageToScreenshot = JSON.parse(event.body).pageToScreenshot;
   console.log(`Taking screenshot of ${pageToScreenshot}`);
 
+  console.log('creating browser...');
   const browser = await chromium.puppeteer.launch({
     executablePath: await chromium.executablePath,
     args: chromium.args,
@@ -13,12 +14,16 @@ exports.handler = async (event, context) => {
     args: ['--no-sandbox'],
   });
 
+  console.log('creating page...');
   const page = await browser.newPage();
 
+  console.log(`navigating to ${pageToScreenshot}...`);
   await page.goto(pageToScreenshot);
 
+  console.log('taking screenshot...');
   const screenshot = await page.screenshot({ encoding: 'binary' });
 
+  console.log('closing browser...');
   await browser.close();
 
   console.log(`Complete screenshot of ${pageToScreenshot}`);
