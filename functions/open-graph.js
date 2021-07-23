@@ -1,4 +1,5 @@
 const chromium = require('chrome-aws-lambda');
+const fetch = require('node-fetch');
 
 const takeScreenshot = async (pageToScreenshot) => {
   const browser = await chromium.puppeteer.launch({
