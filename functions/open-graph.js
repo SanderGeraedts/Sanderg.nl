@@ -15,6 +15,7 @@ exports.handler = async (event, context) => {
   });
 
   console.log('creating page...');
+  console.log(browser);
   const page = await browser.newPage();
 
   console.log(`navigating to ${pageToScreenshot}...`);
