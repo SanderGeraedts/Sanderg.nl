@@ -10,8 +10,6 @@ exports.handler = async (event, context) => {
     args: chromium.args,
     defaultViewport: chromium.defaultViewport,
     headless: chromium.headless,
-    ignoreDefaultArgs: ['--disable-extensions'],
-    args: ['--no-sandbox'],
   });
 
   console.log('creating page...');
