@@ -2,6 +2,7 @@ const chromium = require('chrome-aws-lambda');
 
 exports.handler = async (event, context) => {
   const pageToScreenshot = JSON.parse(event.body).pageToScreenshot;
+  console.log(`Taking screenshot of ${pageToScreenshot}`);
 
   const browser = await chromium.puppeteer.launch({
     executablePath: await chromium.executablePath,
@@ -19,6 +20,8 @@ exports.handler = async (event, context) => {
   const screenshot = await page.screenshot({ encoding: 'binary' });
 
   await browser.close();
+
+  console.log(`Complete screenshot of ${pageToScreenshot}`);
 
   return {
     statusCode: 200,
