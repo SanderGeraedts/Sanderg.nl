@@ -1,5 +1,6 @@
 const chromium = require('chrome-aws-lambda');
 const fetch = require('node-fetch');
+const { DEPLOY_PRIME_URL } = process.env;
 
 const takeScreenshot = async (pageToScreenshot) => {
   const browser = await chromium.puppeteer.launch({
@@ -21,7 +22,7 @@ const takeScreenshot = async (pageToScreenshot) => {
 };
 
 const uploadToCloudinary = async (screenshot) => {
-  return await fetch(`/.netlify/functions/cloudinary-uploader`, {
+  return await fetch(`${DEPLOY_PRIME_URL}/.netlify/functions/cloudinary-uploader`, {
     method: 'POST',
     body: JSON.stringify({
       screenshot,
