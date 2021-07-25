@@ -1,10 +1,25 @@
 ---
+import { checkOG, renamePath } from "../helpers/index.js";
+import screenshot from "../helpers/screenshot.js";
+
 export interface Props {
   title?: string;
   description: string;
   permalink: string;
 }
+
 const { title="Sanderg.nl", description, permalink } = Astro.props;
+
+const ogImage = async () => {
+    const path = renamePath(permalink);
+
+    if(!checkOG(path)) {
+        console.log(`Creating OG image for ${path}...`)
+        return await screenshot(permalink, './public/assets/images/og-images')
+    } else {
+        return `/assets/images/og-images/${path}.png`
+    }
+}
 ---
 
 
@@ -24,11 +39,11 @@ const { title="Sanderg.nl", description, permalink } = Astro.props;
 <meta property="og:url" content={permalink} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
-<meta property="og:image" content="https://sanderg.nl/assets/images/og.png" />
+<meta property="og:image" content={`https://sanderg.nl${await ogImage()}`} />
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
 <meta property="twitter:url" content={permalink} />
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
-<meta property="twitter:image" content="https://sanderg.nl/assets/images/og.png" />
+<meta property="twitter:image" content={`https://sanderg.nl${await ogImage()}`} />
