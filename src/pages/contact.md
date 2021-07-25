@@ -1,6 +1,7 @@
 ---
 title: 'Contact'
 subtext: 'Voor als je even wilt babbelen.'
+permalink: 'https://sanderg.nl/contact'
 description: 'Hey, mijn naam is Sander Geraedts. Ik ben een Front-end Developer uit Veendam en werk op dit moment voor ABN AMRO, in opdracht van Sogeti.'
 publishDate: 'Tuesday, July 6 2021'
 layout: '../layouts/page-layout.astro'

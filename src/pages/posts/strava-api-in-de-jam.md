@@ -1,5 +1,6 @@
 ---
 title: 'Strava API in de JAMStack'
+permalink: 'https://sanderg.nl/posts/strava-api-in-de-jam'
 description: 'Op de homepage staat hoeveel kilometer ik heb hardgelopen volgens mijn Strava account. In deze post leg ik uit hoe ik dit gemaakt heb zonder "echte backend".'
 publishDate: '2021-07-20'
 layout: '../../layouts/blog-layout.astro'
