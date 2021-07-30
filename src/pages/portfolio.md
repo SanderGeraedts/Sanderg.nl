@@ -1,7 +1,7 @@
 ---
 title: 'Portfolio'
 subtext: 'Wat ik heb gedaan.'
-permalink: 'https://sanderg.nl/portfolio'
+permalink: '/portfolio'
 description: 'Hey, mijn naam is Sander Geraedts. Ik ben een Front-end Developer uit Veendam en werk op dit moment voor ABN AMRO, in opdracht van Sogeti.'
 publishDate: 'Tuesday, July 6 2021'
 layout: '../layouts/page-layout.astro'

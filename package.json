@@ -23,7 +23,6 @@
   },
   "dependencies": {
     "cloudinary": "^1.26.2",
-    "faunadb": "^4.3.0",
-    "puppeteer": "^10.1.0"
+    "faunadb": "^4.3.0"
   }
 }

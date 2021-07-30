@@ -3,9 +3,7 @@
 
 /** @type {import("snowpack").SnowpackUserConfig } */
 module.exports = {
-  alias: {
-    puppeteer: './node_modules/puppeteer',
-  },
+  alias: {},
   mount: {
     /* ... */
   },

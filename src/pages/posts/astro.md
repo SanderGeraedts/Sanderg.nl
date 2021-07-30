@@ -1,6 +1,6 @@
 ---
 title: 'Astro, mijn bevindingen na 1 site'
-permalink: 'https://sanderg.nl/posts/astro'
+permalink: '/posts/astro'
 description: 'Toen ik Chris Coyier in zo''n 3 afleveringen van de ShopTalk Show hoorde praten over Astro, dacht ik: "Ik zal het maar eens uitproberen". Als eerste heb ik een klein demo projectje aangemaakt, maar om het echt uit proberen, moest je toch iets "echters" proberen. Daarom heb ik besloten mijn site te herschrijven naar Astro.'
 publishDate: '2021-07-15'
 layout: '../../layouts/blog-layout.astro'

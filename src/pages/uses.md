@@ -1,6 +1,6 @@
 ---
 title: 'Mijn <code>/uses</code> pagina'
-permalink: 'https://sanderg.nl/uses'
+permalink: '/uses'
 description: 'Op deze pagina hou ik bij welke dingen ik gebruik in mijn dagelijks werk. Denk aan dingen als software, tooling, gadgets, etc.'
 publishDate: '2021-07-19'
 layout: '../layouts/blog-layout.astro'

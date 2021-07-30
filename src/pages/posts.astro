@@ -11,7 +11,7 @@ const uses = Astro.fetchContent('./uses.md')
 allPosts = allPosts.concat(uses);
 allPosts = allPosts.sort((a, b) => new Date(b.publishDate) - new Date(a.publishDate));
 ---
-<Layout title="Blog - Sanderg.nl" description="Hey, ik ben Sander Geraedts. Front-end Developer bij Sogeti, hardloper, en baasje van de veel te schattige puppy Luna." permalink="https://sanderg.nl/posts">
+<Layout title="Blog - Sanderg.nl" description="Hey, ik ben Sander Geraedts. Front-end Developer bij Sogeti, hardloper, en baasje van de veel te schattige puppy Luna." permalink="/posts">
     <Wrapper>
         <Title title="Blog">Een plek zodat andere kunnen leren van mijn fouten.</Title>
         <div class="posts">
