@@ -1,10 +1,9 @@
-d---
+---
 title: 'Astro, Puppeteer en Open Graph Images'
 permalink: '/posts/astro-puppeteer-en-open-graph-images'
 description: 'Toen ik mijn eerste post over Astro plaatste op LinkedIn, viel me op dat ik iets was vergeten. Een goede Open Graph afbeelding! Oh nee! ... oke, zo erg is het nou ook weer niet, maar netjes is iets anders. En moeilijk zou het ook niet moeten zijn. Maak een screenshot met Puppeteer, sla deze ergens op, en prop hem vervolgens in de meta-tags. Dit bleek echter makkelijker gezegd dan gedaan.'
 publishDate: '2021-07-31'
 layout: '../../layouts/blog-layout.astro'
-
 ---
 
 Toen ik mijn eerste post over Astro plaatste op LinkedIn, viel me op dat ik iets was vergeten. Een goede Open Graph afbeelding! Oh nee!
@@ -50,3 +49,18 @@ In het kort doet deze applicatie de volgende dingen:
 Stap 1 en 2 waren zo gedaan. De [Github API](https://docs.github.com/en/rest/reference/repos) is super gedocumenteerd, en heeft geen vervelende authenticatie stap voor data die openlijk toegankelijk is ([Nee Strava, ik kijk je niet aan hoor...](https://sanderg.nl/posts/strava-api-in-de-jam)). Ook de Cloudinary SDK werkte zonder problemen. Het grootste probleem was voornamelijk Heroku in combinatie met Puppeteer.
 
 Er waren 2 dingen die op Heroku anders werkten dan op mijn lokale machine. Als eerste gaf Heroku een error dat puppeteer niet opgestart kon worden, omdat niet de juiste buildpacks geïnstalleerd waren. Voor puppeteer is er een speciaal buildpack voor heroku gemaakt, genaamd [puppeteer-heroku-buildpack](https://github.com/jontewks/puppeteer-heroku-buildpack), maar zelfs toen het geïnstalleerd was, bleven dezelfde problemen terug komen. Op [Stackoverflow](https://stackoverflow.com/a/55090914) was gelukkig het antwoord te vinden. Het grote probleem was dat de buildpacks eerst volledig gecleard moesten worden. Toen dat gedaan was, werkte het perfect. Dat heet... het gaf een andere error.
+
+[![CommitStrip over een andere error message krijgen na ](https://www.commitstrip.com/wp-content/uploads/2018/05/Strip-La-joie-du-message-derreur-english650-final.jpg)](https://www.commitstrip.com/en/2018/05/09/progress/)
+
+Het volgende probleem was gelukkig makkelijk op te lossen. Op mijn lokale machine had ik genoeg resources om meerdere versies van puppeteer op te starten. Hierdoor konden screenshot asynchroon gemaakt worden. Echter op Heroku zit er de limitatie dat zodra puppeteer door een process gebruikt wordt, andere processen er geen gebruik van kunnen maken. Dit was gelukkig makkelijk opgelost met een paar `await` statements.
+
+## Conclusie
+
+Elke techniek die ik in dit mini-projectje heb gebruikt is losstaand super eenvoudig. Puppeteer werkt perfect op een lokale machine. Serverless functions zijn, mede door Netlify, zo op te zetten, Heroku idem dito en ik kan geen slecht woord over de Cloudinary SDK zeggen. Probeer het echter aan elkaar te knopen, en dingen worden plotseling moeilijker. Vaak helpt het dan om een stap terug te nemen en alles rustiger te overdenken.
+
+Mocht je de code in willen zien om het zelf op te zetten voor je eigen sites, dan heb ik hier wat links voor je:
+
+- [Node app](https://github.com/SanderGeraedts/OG-Image-Puppeteer)
+- [HeadBase.astro](https://github.com/SanderGeraedts/Sanderg.nl/blob/master/src/components/HeadBase.astro), het astro component waar de `og:image` meta-tag wordt aangemaakt.
+
+Daarnaast kan je mij ook altijd een berichtje sturen. Veel succes!

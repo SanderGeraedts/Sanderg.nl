@@ -6,16 +6,13 @@ import Wrapper from "../components/Wrapper.astro";
 
 // Data Fetching: List all Markdown posts in the repo.
 let allPosts = Astro.fetchContent('./posts/*.md');
-const uses = Astro.fetchContent('./uses.md')
-
-allPosts = allPosts.concat(uses);
 allPosts = allPosts.sort((a, b) => new Date(b.publishDate) - new Date(a.publishDate));
 ---
 <Layout title="Blog - Sanderg.nl" description="Hey, ik ben Sander Geraedts. Front-end Developer bij Sogeti, hardloper, en baasje van de veel te schattige puppy Luna." permalink="/posts">
     <Wrapper>
         <Title title="Blog">Een plek zodat andere kunnen leren van mijn fouten.</Title>
         <div class="posts">
-            {allPosts.map(p => <BlogItem post={p} />)}
+        {allPosts.map(p => <BlogItem post={p} />)}
         </div>
     </Wrapper>
 </Layout>
