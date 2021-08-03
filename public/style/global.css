@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,400&display=swap');
 
-:root {
+:root,
+html.light-mode {
   --col-black: #212121;
   --col-pink: #fc5e97;
   --col-gray: #666666;
@@ -11,10 +12,27 @@
   --size-width-lg: 1024px;
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --col-black: #dedede;
+    --col-pink: #f5581a;
+    --col-gray: #999999;
+    --col-off-white: #212121;
+  }
+}
+
+html.dark-mode {
+  --col-black: #dedede;
+  --col-pink: #f5581a;
+  --col-gray: #999999;
+  --col-off-white: #212121;
+}
+
 html,
 body {
   font-size: 20px;
   color: var(--col-black);
+  background-color: var(--col-off-white);
   font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
@@ -91,6 +109,20 @@ code {
   background-color: #ddd;
   border-radius: 0.25rem;
   padding-inline: 0.25rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  code {
+    background-color: #444;
+  }
+}
+
+html.dark-mode code {
+  background-color: #444;
+}
+
+html.light-mode code {
+  background-color: #ddd;
 }
 
 .col-gray {

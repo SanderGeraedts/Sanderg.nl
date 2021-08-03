@@ -1,5 +1,8 @@
 ---
 import Logo from "./Logo.astro";
+import DarkmodeToggle from "./DarkmodeToggle.astro";
+import Wrapper from "./Wrapper.astro";
+
 ---
 <nav>
     <ul>
@@ -18,24 +21,36 @@ import Logo from "./Logo.astro";
         <li>
             <a href="/contact">Contact</a>
         </li>
+        <div class="dark-mode">
+            <DarkmodeToggle />
+        </div>
     </ul>
 </nav>
 
 <style>
+.spacer {
+    margin-right: auto;
+}
 ul {
     display: flex;
     list-style: none;
     justify-content: center;
     align-items: center;
+    width: 100%;
     gap: 2rem;
     margin: 10px 0;
     padding: 0;
 }
 
 a {
-color: var(--col-black);
-text-decoration: none;
-font-weight: var(--fw-semi-bold);
+    color: var(--col-black);
+    text-decoration: none;
+    font-weight: var(--fw-semi-bold);
+}
+
+.dark-mode {
+    position: absolute;
+    right: 1rem;
 }
 
 @media (max-width: 1024px) {
@@ -49,5 +64,12 @@ ul {
     flex-basis: 100%;
     justify-content: center;
 }
+
+.dark-mode {
+    top: 0.5rem;
+    right: 0.5rem;
 }
+}
+
+
 </style>

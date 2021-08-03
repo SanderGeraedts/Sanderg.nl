@@ -1,0 +1,91 @@
+---
+
+---
+<div class="dark-mode-toggle">
+    <label class="toggle-control">
+    <input id="darkmodeToggle" type="checkbox" checked="checked">
+    <span class="control"></span>
+    </label>
+    <script>
+        const userPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        console.log({userPrefersDark});
+
+        const toggle = document.getElementById('darkmodeToggle');
+        toggle.checked = userPrefersDark;
+
+        toggle.addEventListener('change', (event) => {
+            const html = document.querySelector('html');
+            html.className = (event.target.checked) ? 'dark-mode' : 'light-mode';
+        });
+    </script>
+</div>
+
+<style>
+.dark-mode-toggle {
+    display: block;
+    height: 25px;
+}
+
+.toggle-control {
+  display: block;
+  position: relative;
+  padding-left: 50px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.toggle-control input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.toggle-control input:checked ~ .control {
+  background-color: #fefefe;
+}
+.toggle-control input:checked ~ .control:after {
+  left: 28px;
+  background: #fc5e97;
+}
+.toggle-control .control {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 50px;
+  border-radius: 12.5px;
+  background-color: #212121;
+  transition: background-color 0.15s ease-in;
+}
+.toggle-control .control:after {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  width: 19px;
+  height: 19px;
+  border-radius: 12.5px;
+  background: #f5581a;
+  transition: left 0.15s ease-in;
+}
+
+@media (max-width: 424px) {  
+.toggle-control input:checked ~ .control:after {
+  left: 18px;
+}
+
+.toggle-control .control {
+  width: 40px;
+}
+
+.toggle-control {
+  padding-left: 40px;
+}
+}
+
+
+</style>
