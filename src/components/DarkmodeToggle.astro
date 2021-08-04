@@ -3,19 +3,28 @@
 ---
 <div class="dark-mode-toggle">
     <label for="darkmodeToggle" class="toggle-control">
-    <input id="darkmodeToggle" type="checkbox" checked="checked">
+    <input id="darkmodeToggle" type="checkbox" checked="checked" aria-label="Dark mode switch">
     <span class="control"></span>
     </label>
     <script>
         const userPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-        console.log({userPrefersDark});
-
+        
+        const darkmodeSession = sessionStorage.getItem('dark-mode-session');
         const toggle = document.getElementById('darkmodeToggle');
-        toggle.checked = userPrefersDark;
+
+        if(darkmodeSession) {
+            document.querySelector('html').className = darkmodeSession;
+            toggle.checked = (darkmodeSession === 'dark-mode');
+        } else {
+            toggle.checked = userPrefersDark;
+        }
+
 
         toggle.addEventListener('change', (event) => {
-            const html = document.querySelector('html');
-            html.className = (event.target.checked) ? 'dark-mode' : 'light-mode';
+            const className = (event.target.checked) ? 'dark-mode' : 'light-mode'
+            
+            document.querySelector('html').className = className;
+            const darkmodeSession = sessionStorage.setItem('dark-mode-session', className);
         });
     </script>
 </div>
