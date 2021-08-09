@@ -5,16 +5,22 @@ export interface Props {
   src: string;
   alt: string;
 }
+
 const { src, alt } = Astro.props;
 ---
 
 <div class="hero">
-    {src && <img src={src} alt={alt} loading="lazy">}
+    <img class='cld-responsive' data-src={`https://res.cloudinary.com/sandergnl/image/upload/c_scale,w_auto/${src}`}/>
     <Wrapper>
     <div class="intro">
         <slot />
     </div>
     </Wrapper>
+    <script type="text/javascript">
+    var cl = cloudinary.Cloudinary.new({cloud_name: "sandergnl"}); 
+    // replace 'demo' with your cloud name in the line above 
+    cl.responsive();
+</script>
 </div>
 
 <style>

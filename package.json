@@ -22,7 +22,6 @@
     "prettier": "^2.2.1"
   },
   "dependencies": {
-    "cloudinary": "^1.26.2",
     "faunadb": "^4.3.0"
   }
 }
