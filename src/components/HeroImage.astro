@@ -10,7 +10,7 @@ const { src, alt } = Astro.props;
 ---
 
 <div class="hero">
-    <img class='cld-responsive' data-src={`https://res.cloudinary.com/sandergnl/image/upload/c_scale,w_auto/${src}`}/>
+    <img class='cld-responsive' alt={alt} data-src={`https://res.cloudinary.com/sandergnl/image/upload/c_scale,w_auto/${src}`}/>
     <Wrapper>
     <div class="intro">
         <slot />
