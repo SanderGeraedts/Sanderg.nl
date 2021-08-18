@@ -117,6 +117,46 @@ code {
   }
 }
 
+pre[class|='language'] {
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+[class|='language'] {
+  overflow-x: scroll;
+  background-color: #1e1e1e;
+  color: #9cdcfe;
+}
+
+[class|='language'] .token.operator {
+  color: #b5cea8;
+}
+
+[class|='language'] .token.comment {
+  color: #6a9955;
+}
+
+[class|='language'] .token.keyword {
+  color: #c586c0;
+}
+
+[class|='language'] .token.punctuation {
+  color: #d7ba7d;
+}
+
+[class|='language'] .token.tag {
+  color: #569cd6;
+}
+
+[class|='language'] .token.string,
+[class|='language'] .token.attr-value {
+  color: #ce9178;
+}
+
+[class|='language'] .token.attr-name {
+  color: #9cdcfe;
+}
+
 html.dark-mode code {
   background-color: #444;
 }
