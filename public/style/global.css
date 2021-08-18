@@ -117,13 +117,24 @@ code {
   }
 }
 
-pre[class|='language'] {
+pre {
   padding: 1rem;
   border-radius: 0.5rem;
+  background-color: #1e1e1e;
+  overflow-x: auto;
 }
 
-[class|='language'] {
-  overflow-x: scroll;
+html.dark-mode code {
+  background-color: #444;
+}
+
+html.light-mode code {
+  background-color: #ddd;
+}
+
+code[class|='language'],
+html.dark-mode code[class|='language'],
+html.light-mode code[class|='language'] {
   background-color: #1e1e1e;
   color: #9cdcfe;
 }
@@ -155,14 +166,6 @@ pre[class|='language'] {
 
 [class|='language'] .token.attr-name {
   color: #9cdcfe;
-}
-
-html.dark-mode code {
-  background-color: #444;
-}
-
-html.light-mode code {
-  background-color: #ddd;
 }
 
 .col-gray {
