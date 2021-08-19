@@ -49,7 +49,7 @@ export default async (homepage) => {
 };
 ```
 
-This worked without too many problems, except that 90% of the sites didn't have an open-graph image. And kicking people in the [Discord](https://astro.build/chat) to upload an image only goes so far (Hi Sarah) 😉.
+Dit werkte zonder al te veel problemen, alleen werkte ik dat zo'n 90% van de sites geen open-graph image hadden. En mensen in de [Discord](https://astro.build/chat) schoppen om een afbeelding up te loaden gaat ook maar zo ver (Hi Sarah) 😉.
 
 ### Versie 2: screenshot.11ty.dev
 
