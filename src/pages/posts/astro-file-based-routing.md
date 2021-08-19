@@ -85,3 +85,5 @@ In principe kunnen we deze code in 2 delen zien. het `getStaticPaths()`-gedeelte
 ### Een issue met getStaticPaths()
 
 In de versie waarmee Astro Showcase is gemaakt, `v0.19.0-next.2`, zat een issue waardoor de `getStaticPaths()`-methode voor elke pagina werd aangeroepen. Dit betekent dat als je een API-call maakt die vervolgens 100 pagina's gaat aanmaken, dat in zeer korte tijd 100 API-calls gemaakt worden. Dit zorgde er voor dat ik direct door het rate limit van de Github API schoot. Ik heb dit opgelost door de file lokaal op te slaan na het eerste request. Hoe dit exact werkt, leg ik in een andere blogpost uit. Als deze nog niet gepubliceerd is, hou deze website of mijn [LinkedIn](https://www.linkedin.com/in/sander-geraedts/) in de gaten! 😉
+
+**EDIT:** een van de core contributors in het Astro team, [Fred Schott](https://twitter.com/fredkschott), heeft op de [Discord](https://astro.build/chat) laten weten dat hij dit heeft opgepakt en er binnen een paar dagen een fix voor zal hebben. Verwacht dit in `v0.19.1`.
