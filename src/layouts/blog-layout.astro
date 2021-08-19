@@ -5,22 +5,33 @@ import Wrapper from '../components/Wrapper.astro';
 import Layout from '../layouts/layout.astro';
 
 const {content} = Astro.props;
-const {title, description, publishDate, author, heroImage, permalink} = content;
+const {title, description, publishDate, author, heroImage, permalink, lang, dutchLink, englishLink} = content;
+
 const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
 
-function removeTags(string) {
+const removeTags = (string) => {
     const regex = /(<([^>]+)>)/ig
     return string.replace(regex, "")
 }
+
+const showLanguageBanner = () => {
+    if(englishLink) {
+        return <p class="language-banner i">Hey, more comfortable in English? Here's the <a href={englishLink}>English version of this post</a>!</p>
+    }
+    if(dutchLink) {
+        return <p class="language-banner i">Hey, liever de Nederlandse versie? Hier is <a href={dutchLink}>de post in het Nederlands</a>!</p>
+    }
+}
 ---
 
-<Layout title={`${removeTags(title)} - Sanderg.nl`} description={description} permalink={permalink}>
+<Layout title={`${removeTags(title)} - Sanderg.nl`} description={description} permalink={permalink} language={lang}>
     <Wrapper>
     <div class="mt-2">
         <header>
             <h1 class="title">{title}</h1>
-            <p class="publishDate">Laatst bijwerkt op {new Date(publishDate).toLocaleDateString('nl-NL', options)}.</p>
+            <p class="publishDate">{(lang === "en") ? "Last updated at " : "Laatst bijwerkt op "}{new Date(publishDate).toLocaleDateString('nl-NL', options)}.</p>
         </header>
+        { showLanguageBanner()}
         <slot />
     </div>
     </Wrapper>

@@ -5,6 +5,7 @@ html.light-mode {
   --col-black: #212121;
   --col-pink: #fc5e97;
   --col-gray: #666666;
+  --col-light-gray: #ddd;
   --col-off-white: #fefefe;
 
   --fw-semi-bold: 600;
@@ -17,6 +18,7 @@ html.light-mode {
     --col-black: #dedede;
     --col-pink: #f5581a;
     --col-gray: #999999;
+    --col-light-gray: #444;
     --col-off-white: #212121;
   }
 }
@@ -25,6 +27,7 @@ html.dark-mode {
   --col-black: #dedede;
   --col-pink: #f5581a;
   --col-gray: #999999;
+  --col-light-gray: #444;
   --col-off-white: #212121;
 }
 
@@ -106,15 +109,16 @@ img {
 }
 
 code {
-  background-color: #ddd;
+  background-color: var(--col-light-gray);
   border-radius: 0.25rem;
   padding-inline: 0.25rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  code {
-    background-color: #444;
-  }
+.language-banner {
+  display: inline;
+  background-color: var(--col-light-gray);
+  border-radius: 0.25rem;
+  padding: 0.5rem;
 }
 
 pre {
@@ -124,12 +128,9 @@ pre {
   overflow-x: auto;
 }
 
-html.dark-mode code {
-  background-color: #444;
-}
-
+html.dark-mode code,
 html.light-mode code {
-  background-color: #ddd;
+  background-color: var(--col-light-gray);
 }
 
 code[class|='language'],
@@ -152,11 +153,15 @@ html.light-mode code[class|='language'] {
 }
 
 [class|='language'] .token.punctuation {
-  color: #d7ba7d;
+  color: #ffd700;
 }
 
 [class|='language'] .token.tag {
   color: #569cd6;
+}
+
+[class|='language'] .token.function {
+  color: #dcdcaa;
 }
 
 [class|='language'] .token.string,
