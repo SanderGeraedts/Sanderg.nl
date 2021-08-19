@@ -108,6 +108,10 @@ img {
   }
 }
 
+main a + a {
+  margin-left: 4px;
+}
+
 code {
   background-color: var(--col-light-gray);
   border-radius: 0.25rem;
@@ -156,7 +160,8 @@ html.light-mode code[class|='language'] {
   color: #ffd700;
 }
 
-[class|='language'] .token.tag {
+[class|='language'] .token.tag,
+[class|='language'] .token.constant {
   color: #569cd6;
 }
 
