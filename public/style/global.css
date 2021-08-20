@@ -125,6 +125,12 @@ code {
   padding: 0.5rem;
 }
 
+@media (max-width: 1024px) {
+  .language-banner {
+    display: block;
+  }
+}
+
 pre {
   padding: 1rem;
   border-radius: 0.5rem;
