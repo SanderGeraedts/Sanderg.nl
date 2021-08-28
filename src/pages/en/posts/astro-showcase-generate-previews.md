@@ -1,5 +1,5 @@
 ---
-title: Astro Showcase, Generating the previews
+title: Astro Showcase, generating the previews
 permalink: /en/posts/astro-showcase-generate-previews
 lang: en
 dutchLink: /posts/astro-showcase-previews-genereren
