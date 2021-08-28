@@ -12,7 +12,7 @@ collections:
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Permalink', name: 'permalink', widget: 'string' }
-      - { label: 'English Link', name: 'englishLink', widget: 'string' }
+      - { label: 'English Link', name: 'englishLink', widget: 'string', required: false }
       - { label: 'Description', name: 'description', widget: 'text' }
       - { label: 'Publish Date', name: 'publishDate', widget: 'datetime' }
       - { label: 'Layout', name: 'layout', widget: 'hidden', default: '../../layouts/blog-layout.astro' }
@@ -25,7 +25,7 @@ collections:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Permalink', name: 'permalink', widget: 'string' }
       - { label: 'Language', name: 'lang', widget: 'hidden', default: 'en' }
-      - { label: 'Dutch Link', name: 'dutchLink', widget: 'string' }
+      - { label: 'Dutch Link', name: 'dutchLink', widget: 'string', required: false }
       - { label: 'Description', name: 'description', widget: 'text' }
       - { label: 'Publish Date', name: 'publishDate', widget: 'datetime' }
       - { label: 'Layout', name: 'layout', widget: 'hidden', default: '../../../layouts/blog-layout.astro' }
