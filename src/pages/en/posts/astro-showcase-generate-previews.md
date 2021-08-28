@@ -1,11 +1,13 @@
 ---
-title: 'Astro Showcase, het genereren van de previews'
-permalink: '/en/posts/astro-showcase-generate-previews'
-lang: 'en'
-dutchLink: '/posts/astro-showcase-previews-genereren'
-description: 'The last few posts have been about several issues I encountered while creating the Astro Showcase site. One of the coolest features I think is the preview image for each project. How that works, I explain in this post.😉'
-publishDate: '2021-08-19 18:00'
-layout: '../../../layouts/blog-layout.astro'
+title: Astro Showcase, Generating the previews
+permalink: /en/posts/astro-showcase-generate-previews
+lang: en
+dutchLink: /posts/astro-showcase-previews-genereren
+description: The last few posts have been about several issues I encountered
+  while creating the Astro Showcase site. One of the coolest features I think is
+  the preview image for each project. How that works, I explain in this post.😉
+publishDate: 2021-08-19 18:00
+layout: ../../../layouts/blog-layout.astro
 ---
 
 The [last](/posts/astro-file-based-routing) [pair](/posts/astro-local-data-caching) of posts were all about several issues I ran into while creating the [Astro Showcase](https://astro-showcase.netlify.app) site. One of the coolest features I think is the preview image for each project. How that works, I explain in this post. 😉
