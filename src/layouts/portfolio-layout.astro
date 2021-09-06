@@ -1,0 +1,35 @@
+---
+import { Markdown } from 'astro/components';
+import HeadBase from '../components/HeadBase.astro';
+import Wrapper from '../components/Wrapper.astro';
+import Layout from '../layouts/layout.astro';
+
+const {content} = Astro.props;
+const {title, description, startDate, endDate, jobTitle, heroImage, permalink} = content;
+
+const options = { year: '2-digit', month: 'short' };
+---
+
+<Layout title={`${title} - Sanderg.nl`} description={description} permalink={permalink} language="nl">
+    <Wrapper>
+    <div class="mt-2">
+        <header>
+            <h1 class="title">{title}</h1>
+            <p class="publishDate">{jobTitle} - {new Date(startDate).toLocaleDateString('nl-NL', options)} tot {(endDate) ? new Date(endDate).toLocaleDateString('nl-NL', options) : "heden"}</p>
+        </header>
+        <slot />
+    </div>
+    </Wrapper>
+</Layout>
+
+<style>
+.publishDate {
+    font-style: italic;
+    margin-top: 0;
+    color: var(--col-gray);
+}
+
+header h1 {
+    margin-bottom: -0.25rem;
+}
+</style>
