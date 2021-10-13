@@ -1,6 +1,6 @@
 ---
 title: Three.js Uitproberen
-permalink: three.js-uitproberen
+permalink: three-js-uitproberen
 description: Vandaag had ik een uurtje tijd om Three.js eindelijk eens uit te
   proberen. Three.js staat al een tijdje op mijn lijstje om er eens naar te
   kijken, maar ik heb er nog geen use case voor gehad. Als ik zelf iets ontwerp,
