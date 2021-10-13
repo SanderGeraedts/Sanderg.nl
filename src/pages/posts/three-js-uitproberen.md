@@ -21,7 +21,7 @@ Hey, ik heb gewaarschuwd dat ik geen 3D-ontwerper ben. 😉
 
 Zelf vind ik het een best grappig resultaat. Ik heb een paar ideeën gekregen hoe ik het voor iets daadwerkelijks nuttigs kan gebruiken, en daar ging het me vooral om. Een extra stukje gereedschap in je koffer is altijd handig, omdat je nooit weet tot wat voor een inzichten het kan leiden.
 
-Voor de mensen die geïnteresseerd zijn in de code, deze is hieronder vermeld. Wil je het hele project clonen, is hier de link naar het project op Github: <https://github.com/SanderGeraedts/Threejs-Uitprobeersel>
+Voor de mensen die geïnteresseerd zijn in de code, deze is hieronder vermeld. Wil je het hele project clonen, is hier de link naar het project op Github: [SanderGeraedts/Threejs-Uitprobeersel](https://github.com/SanderGeraedts/Threejs-Uitprobeersel)
 
 **index.html**
 
