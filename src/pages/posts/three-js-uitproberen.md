@@ -1,13 +1,13 @@
 ---
 title: Three.js Uitproberen
 permalink: three.js-uitproberen
-description: Vandaag had ik een uurtje tijd om [Three.js](https://threejs.org/)
-  eindelijk eens uit te proberen. Three.js staat al een tijdje op mijn lijstje
-  om er eens naar te kijken, maar ik heb er nog geen use case voor gehad. Als ik
-  zelf iets ontwerp, is het meestal plat 2D zonder al te veel grote animaties en
-  afbeeldingen. Ik zou kunnen zeggen dat het mij stijl is, en dat is het ook
-  wel, maar vooral omdat ik zelf niet goed ben in het tekenen en animeren van
-  plaatjes. Hoe het uit is gepakt lees je in deze post!
+description: Vandaag had ik een uurtje tijd om Three.js eindelijk eens uit te
+  proberen. Three.js staat al een tijdje op mijn lijstje om er eens naar te
+  kijken, maar ik heb er nog geen use case voor gehad. Als ik zelf iets ontwerp,
+  is het meestal plat 2D zonder al te veel grote animaties en afbeeldingen. Ik
+  zou kunnen zeggen dat het mij stijl is, en dat is het ook wel, maar vooral
+  omdat ik zelf niet goed ben in het tekenen en animeren van plaatjes. Hoe het
+  uit is gepakt lees je in deze post!
 publishDate: 2021-10-13T16:41:31.493Z
 layout: ../../layouts/blog-layout.astro
 ---
