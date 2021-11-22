@@ -6,7 +6,7 @@ description: De afgelopen weken ben ik gedoken in de wereld van het 3D printen.
   die tijd niet heel veel heeft uitgestaan. Met deze post wil ik jullie meenemen
   in alles wat er bij komt kijken, zodat jij ook de beslissen kan maken of het
   voor jou de investering waard is.
-publishDate: 2021-11-22T10:36:51.213Z
+publishDate: 2021-11-23T17:00:48.649Z
 layout: ../../layouts/blog-layout.astro
 ---
 De afgelopen weken ben ik gedoken in de wereld van het 3D printen. Tegenwoordig ben ik namelijk de trotse eigenaar van een 3D printer die sinds die tijd niet heel veel heeft uitgestaan. Met deze post wil ik jullie meenemen in alles wat er bij komt kijken, zodat jij ook de beslissen kan maken of het voor jou de investering waard is.
@@ -29,8 +29,12 @@ Zo heb ik bijvoorbeeld een opstapje gemaakt voor mijn robotstofzuiger, zodat die
 
 ## Printer - Creality3D Ender 3 v2
 
-## Filament - 1.75mm PLA Pro
+De printer die ik heb gekozen is de [Creality3D Ender 3 v2](https://www.bol.com/nl/nl/p/creality-ender-3-v2-nieuwste-3d-printer/9300000006894882/). De Ender 3 serie wordt door vele aangeraden als een goeie beginner's printer. Er is een enorm grote community rond Ender, waardoor er talloze post zijn geschreven en videos zijn gemaakt over hoe je alles insteld en hoe je problemen oplost. Daarnaast, met net over de 200 euro is het een super goedkope printer met een hele goede kwaliteit. De meeste 3D printers (vooral de budget opties) komen geleverd als bouwpakket die je zelf in elkaar moet zetten. De uitleg in de handleiding van de Ender 3 v2 is amper Engels te noemen, maar er zijn talloze goeie video's op Youtube te vinden over hoe je het precies moet opbouwen. Al met al was het opbouwen niet moeilijker dan een nauwkeurige IKEA kast. Af en toe frustrerend, maar te doen.
+
+## "Inkt" - Filament
+
+Zoals een papierprinter inkt nodig heeft om iets te kunnen printen, heeft een 3D printer filament nodig. Filament is over het algemeen een rol met een soort plastic draad wat je de printer geeft. Die filament wordt dan door de printer gesmolten op de juiste plek en direct afgekoeld zodat het hard wordt. Er is filament in allemaal verschillende kleuren en met verschillende attributen, maar de meest simpele heet PLA ("Pie El Ee", niet "pla", vanille pla is geen goed idee), of Polylactic Acid. Dit is makkelijk te printen, niet duur en sterk genoeg voor de meeste dingen. Het grootste nadeel is dat het bij warme temperaturen snel smelt / zacht wordt. Denk hieraan aan een warme auto in de zomer. Zelf heb ik een rol PLA Pro 1.75mm filament gekocht van 3D and Print en ben hier zeer tevreden over. Mijn originele rol (blauw) van een kilo was begint nu op te raken, dus heb ik een nieuwe rol van hetzelfde merk gekocht, maar dan in het wit. Ik verwacht dat ik hier gewoon met dezelfde settings mee kan printen, maar als ik wat moet tweaken, maak ik hier nog een post over. 
+
+Aangezien ik zelf nog niet veel verschillende filaments heb getest, raad ik deze video van Zack Freedman enorm aan: <https://youtu.be/vSwumoSlZTo>. Zelfs als je nog niet overtuigd bent over 3D printing zou ik deze video puur voor de komische waarde aanraden, Zack legt namelijk een super technisch onderwerp hilarisch uit.
 
 ## Modellen - Zelf maken of makkelijk jatten
-
-## Slicer - Ultimaker Cura
