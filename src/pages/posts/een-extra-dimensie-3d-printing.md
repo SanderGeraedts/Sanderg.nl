@@ -9,6 +9,10 @@ description: De afgelopen weken ben ik gedoken in de wereld van het 3D printen.
 publishDate: 2021-11-23T17:00:48.649Z
 layout: ../../layouts/blog-layout.astro
 ---
+
+
+
+
 De afgelopen weken ben ik gedoken in de wereld van het 3D printen. Tegenwoordig ben ik namelijk de trotse eigenaar van een 3D printer die sinds die tijd niet heel veel heeft uitgestaan. Met deze post wil ik jullie meenemen in alles wat er bij komt kijken, zodat jij ook de beslissen kan maken of het voor jou de investering waard is.
 
 ![3D Benchy, een bootje wat gebruikt wordt om problemen met een 3D printer te debuggen. Een soort console.log voor de 3D wereld.](https://res.cloudinary.com/sandergnl/image/upload/c_scale,f_auto,q_auto,w_1024/v1637598431/Benchy_yfnfzl.jpg "3D Benchy, een bootje wat gebruikt wordt om problemen met een 3D printer te debuggen. Een soort console.log voor de 3D wereld.")
@@ -39,4 +43,21 @@ Aangezien ik zelf nog niet veel verschillende filaments heb getest, raad ik deze
 
 ## Modellen - Zelf maken of makkelijk jatten
 
-Een van de voordelen van 3D printen is dat je alles zelf kan maken. Een van de nadelen is dat alles zelf maken heel veel tijd kost. Daarom zijn er websites waar je modellen die andere mensen al gemaakt hebben kan maken om zelf te kunnen printen. Een van de bekendste sites daarvoor is [Thingiverse.com](https://www.thingiverse.com/). Hierop staan duizenden objecten, van beeldjes van je favoriete franchise, tot nuttige dingen als speciale clipjes of mijn [rolluik lock](https://www.thingiverse.com/thing:5140974).
+Een van de voordelen van 3D printen is dat je alles zelf kan maken. Een van de nadelen is dat alles zelf maken heel veel tijd kost. Daarom zijn er websites waar je modellen die andere mensen al gemaakt hebben kan maken om zelf te kunnen printen. Een van de bekendste sites daarvoor is [Thingiverse.com](https://www.thingiverse.com/). Hierop staan duizenden objecten, van beeldjes van je favoriete franchise, tot nuttige dingen als speciale clipjes, standaarden of mijn [rolluik lock](https://www.thingiverse.com/thing:5140974).
+
+In mijn mening is het het leukste om zelf dingen te maken. Dit is een van de hoofdredenen geweest waarom ik frontend developer ben geworden. Om zelf modellen te maken, heb je een CAD programma nodig. Dit zijn over het algemeen zeer technische programma's met een enorme learning curve, maar gelukkig is er een laagdrempelig alternatief genaamd [Tinkercad](https://www.tinkercad.com/). Tinkercad is een web app om 3D modellen mee te maken. Ik beschrijf het meestal als de Paint van de CAD wereld. Je kan er misschien niet alles mee, met complexere objecten mis je echt features, maar mijn god wat is het makkelijk. Iets als Autodesk Fusion 360 is dan weer Photoshop, een professionele tool met enorm veel features om nauwkeurig te werk te gaan, maar een veel stijlere learning curve.
+
+![Screenshot van mijn Tinkercad dashboard](https://res.cloudinary.com/sandergnl/image/upload/c_scale,f_auto,q_auto,w_1024/v1637684359/Tinkercad_zouwpa.png)
+
+Ik ben van plan om na het schrijven van deze post een wat uitgebreidere tutorial te volgen over Fusion 360, omdat na de eerste 10 minuten ik er nog niet helemaal uit kwam. Misschien schrijf ik later nog wel een post over de overstap van Tinkercad naar Fusion 360.
+
+## Wat moet je leren?
+
+Lijkt 3D printing iets voor jou? Mooi! Het is nog nooit zo toegankelijk geweest als het nu is. Printers worden steeds goedkoper, sneller, nauwkeuriger en makkelijker te debuggen. Wel zijn er een aantal dingen die je moet leren in het begin van je 3D printing journey. Zelf sta ik ook nog aan het begin, dus dit lijstje bevat ook dingen die ik zelf moet leren:
+
+* **Het fine-tunen van je printer.** Dit is waarschijnlijk het belangrijkste wat je moet leren, hoewel het ook het minst leuke is. Aangezien printers hele nauwkeurige apparaten zijn, moeten ze ook heel nauwkeurig afgesteld worden. In het begin ga je dus veel tijd kwijt zijn met zorgen dat dat stomme plastic aan je plaat blijft plakken. Gelukkig zijn hier veel blogs en videos over, maar het blijft veel trial and error (en een hele bak aan mislukte prints). Daarom is het belangrijk om te beginnen met een printer met een grote community. Hoe groter de community, hoe groter de kans dat iemand al een uitleg voor jouw probleem heeft geschreven.
+* **Slicer settings.** Een slicer is een programma dat je model omzet naar printbare instructies. De meestgebruikte slicer is Ultimaker's [Cura](https://ultimaker.com/software/ultimaker-cura). In Cura kan specifiek fine-tunen hoe je print geprint wordt. Aangezien we helaas nog gebonden zijn aan zwaartekracht, is het voor een printer niet mogelijk om iets in de lucht te printen, en moeten er dus keuzes gemaakt worden waar supports worden geprint. Meestal kan Cura dat zelf wel genereren, maar soms moet je zelf supports toevoegen of verwijderen. Slicers en hun instellingen zijn zo'n groot onderwerp dat ik er misschien in de toekomst een losse post over schrijf, maar voor nu was het te groot om bij deze post toe te voegen.
+* **Inzicht in hoe je iets moet printen/slicen.** Misschien niet iets wat je moet leren, maar je gaandeweg vanzelf leert. Aangezien printers laagje voor laagje printen, kan de orientatie van een print veel uitmaken. Als je een open bakje wilt printen, is het logisch dat je die rechtop print en niet op z'n kop zodat je niet een hele lading aan supports moet printen om vervolgens weg te gooien. Maar moet je iets printen wat een beetje buigt (denk aan een haakje om een doosje dicht te houden), dan moet je dat in de lengte printen, waardoor het buigt op de lijnen, en niet breekt op de naden. Dit leer je vooral met mislukte prints, vandaar de waarschuwing. 😉
+* **CAD Software (Optioneel).** Als je zelf iets wilt ontwerpen, moet je dat doen in een CAD programma. Voor beginners raad ik [Tinkercad](https://www.tinkercad.com/) van harte aan, maar Fusion 360 (desktop) en Onshape (web) zijn geavanceerdere tools voor de gevorderde gebruiker.
+
+Mocht je verder nog vragen hebben, stuur me gerust een berichtje, ik vind het altijd leuk om hier over te praten met anderen. Als ik je overtuigd heb, stuur me alsjeblieft een foto van je eerste 3DBenchy (dat bootje op de eerste foto), zou die heel graag willen zien!
