@@ -9,10 +9,6 @@ description: De afgelopen weken ben ik gedoken in de wereld van het 3D printen.
 publishDate: 2021-11-23T17:00:48.649Z
 layout: ../../layouts/blog-layout.astro
 ---
-
-
-
-
 De afgelopen weken ben ik gedoken in de wereld van het 3D printen. Tegenwoordig ben ik namelijk de trotse eigenaar van een 3D printer die sinds die tijd niet heel veel heeft uitgestaan. Met deze post wil ik jullie meenemen in alles wat er bij komt kijken, zodat jij ook de beslissen kan maken of het voor jou de investering waard is.
 
 ![3D Benchy, een bootje wat gebruikt wordt om problemen met een 3D printer te debuggen. Een soort console.log voor de 3D wereld.](https://res.cloudinary.com/sandergnl/image/upload/c_scale,f_auto,q_auto,w_1024/v1637598431/Benchy_yfnfzl.jpg "3D Benchy, een bootje wat gebruikt wordt om problemen met een 3D printer te debuggen. Een soort console.log voor de 3D wereld.")
