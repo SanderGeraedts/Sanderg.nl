@@ -6,6 +6,7 @@ html.light-mode {
   --col-pink: #fc5e97;
   --col-gray: #666666;
   --col-light-gray: #ddd;
+  --col-lighter-gray: #eee;
   --col-off-white: #fefefe;
 
   --fw-semi-bold: 600;
@@ -19,6 +20,7 @@ html.light-mode {
     --col-pink: #f5581a;
     --col-gray: #999999;
     --col-light-gray: #444;
+    --col-lighter-gray: #333;
     --col-off-white: #212121;
   }
 }
@@ -28,6 +30,7 @@ html.dark-mode {
   --col-pink: #f5581a;
   --col-gray: #999999;
   --col-light-gray: #444;
+  --col-lighter-gray: #333;
   --col-off-white: #212121;
 }
 
@@ -136,6 +139,21 @@ pre {
   border-radius: 0.5rem;
   background-color: #1e1e1e;
   overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-spacing: 0;
+  border-top: 0.5rem solid var(--col-lighter-gray);
+  border-bottom: 0.5rem solid var(--col-lighter-gray);
+}
+
+tr:nth-child(even) {
+  background-color: var(--col-lighter-gray);
+}
+
+table td {
+  padding: 0 0.5rem;
 }
 
 html.dark-mode .wrapper > .intro {

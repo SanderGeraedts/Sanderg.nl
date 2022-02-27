@@ -1,6 +1,8 @@
 ---
 title: IKEA LACK Behuizing voor Ender 3 v2
 permalink: /posts/ikea-lack-behuizing-voor-ender-3-v2
+lang: nl
+englishLink: /en/posts/ikea-lack-enclosure-for-ender-3-v2
 description: >-
   Zoals ik in een vorige post al heb verteld, heb ik sinds een paar maanden een
   3D printer, de Ender 3 v2. M'n printer heeft in die maanden niet veel
