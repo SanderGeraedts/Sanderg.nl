@@ -19,8 +19,7 @@ description: >-
 publishDate: 2022-02-27T12:08:34.244Z
 layout: ../../layouts/blog-layout.astro
 ---
-
-Zoals ik in een vorige post al heb verteld, heb ik sinds een paar maanden een 3D printer, de Ender 3 v2. M'n printer heeft in die maanden niet veel uitgestaan ([te zien aan de rollen filament die er doorheen zijn gejaagd...](https://res.cloudinary.com/sandergnl/image/upload/c_scale,f_auto,q_auto/v1645963067/Spools-of-Filament.jpg)). En hoewel ik er enorm blij mee ben, heeft m'n printer 2 grote nadelen. Als eerste, maakt die best veel gelawaai tijdens het printen. Dit heb ik al deels verholpen door een stillere fan te installeren, maar nog steeds is het niet fijn om er een hele werkdag langs te zitten als die bezig is met een lange print (met een koptelefoon op is het goed te doen, maar ik hou niet van de hele dag een headset op hebben).
+Zoals ik in een vorige post al heb verteld, heb ik sinds een paar maanden een 3D printer, de Ender 3 v2. M'n printer heeft in die maanden niet veel uitgestaan ([te zien aan de rollen filament die er doorheen zijn gejaagd...](https://res.cloudinary.com/sandergnl/image/upload/c_scale,f_auto,q_auto/v1645963067/Spools-of-Filament.jpg)). En hoewel ik er enorm blij mee ben, heeft m'n printer 2 grote nadelen. Als eerste, maakt die best veel lawaai tijdens het printen. Dit heb ik al deels verholpen door een stillere fan te installeren, maar nog steeds is het niet fijn om er een hele werkdag langs te zitten als die bezig is met een lange print (met een koptelefoon op is het goed te doen, maar ik hou niet van de hele dag een headset op hebben).
 
 Het tweede probleem is dat die best veel plek in neemt op mijn 2de bureau. Beide problemen gaan we in deze post aanpakken.
 
@@ -52,15 +51,15 @@ In totaal stiekem niet zo goedkoop als ik in het begin van uit ging, maar een he
 
 ## Benodigde Prints
 
-- [bottom_corners.stl](https://www.thingiverse.com/thing:3598219) (allemaal als je de cable rail rechts wilt hebben, zo niet, verwijder de hoek met de cable rail uit dit bestand)
-- [top_corners.stl](https://www.thingiverse.com/thing:3598219)
-- [hinges.stl](https://www.thingiverse.com/thing:3598219)
-- [bottom_feet.stl](https://www.thingiverse.com/thing:3598219)
-- [Door Handles for LACK Enclosure](https://www.prusaprinters.org/prints/140777-door-handles-for-lack-enclosure)
-- [Side-mounted Spool Holder for LACK Enclosure](https://www.prusaprinters.org/prints/136683-side-mounted-spool-holder-for-lack-enclosures)
-- \*[Parametric Phone Holder for LACK Enclosure](https://www.prusaprinters.org/prints/140799-parametric-phone-holder-for-lack-enclosure)
-- \*[Back Left Leg with Cable Rail for LACK Enclosure](https://www.prusaprinters.org/prints/140787-back-left-leg-with-cable-rail-for-lack-enclosure) (Als je de cable rail links wilt hebben)
-- \*[Ender 3 v2 Left Display Mount for LACK Enclosure](https://www.prusaprinters.org/prints/140826-ender-3-v2-left-display-mount-for-lack-enclosure)
+* [bottom_corners.stl](https://www.thingiverse.com/thing:3598219) (allemaal als je de cable rail rechts wilt hebben, zo niet, verwijder de hoek met de cable rail uit dit bestand)
+* [top_corners.stl](https://www.thingiverse.com/thing:3598219)
+* [hinges.stl](https://www.thingiverse.com/thing:3598219)
+* [bottom_feet.stl](https://www.thingiverse.com/thing:3598219)
+* [Door Handles for LACK Enclosure](https://www.prusaprinters.org/prints/140777-door-handles-for-lack-enclosure)
+* [Side-mounted Spool Holder for LACK Enclosure](https://www.prusaprinters.org/prints/136683-side-mounted-spool-holder-for-lack-enclosures)
+* \*[Parametric Phone Holder for LACK Enclosure](https://www.prusaprinters.org/prints/140799-parametric-phone-holder-for-lack-enclosure)
+* \*[Back Left Leg with Cable Rail for LACK Enclosure](https://www.prusaprinters.org/prints/140787-back-left-leg-with-cable-rail-for-lack-enclosure) (Als je de cable rail links wilt hebben)
+* \*[Ender 3 v2 Left Display Mount for LACK Enclosure](https://www.prusaprinters.org/prints/140826-ender-3-v2-left-display-mount-for-lack-enclosure)
 
 \* = Optioneel
 
