@@ -4,23 +4,21 @@ permalink: /en/posts/ikea-lack-enclosure-for-ender-3-v2
 lang: en
 dutchLink: /posts/ikea-lack-behuizing-voor-ender-3-v2
 description: >-
-  As I mentioned in a previous post, for a few months now I have a
-  3D printer, the Ender 3 v2. My printer doesn't have much in those months
-  turned off (as can be seen from the spools of filament that have been run  through it...).
-  And although I am very happy with it, my printer has 2 major drawbacks. if
-  First, it makes quite a lot of noise when printing. I already have some of this
-  fixed by installing a quieter fan but still it's not
-  nice to sit by it for a whole working day if it is busy with a long
-  print (with headphones on it's doable, but I don't like the
-  have a headset on all day).
+  As I mentioned in a previous post, I have had a 3D printer, the Ender 3 v2. My
+  printer hasn't been off much in those months (shown by the rolls of filament
+  that have been pushed through it...). And although I am very happy with it, my
+  printer has 2 major drawbacks. First of all, it makes quite a lot of noise
+  during printing. I have already partly solved this by installing a quieter
+  fan, but it is still not nice to sit next to it for a whole working day when
+  it's busy with a long print (with headphones on it's doable, but I don't like
+  to have a headset on all day).
 
 
-   The second problem is that it takes up quite a lot of space on my 2nd desk. We will tackle both problems in this post.
-publishDate: '2021-08-19'
-layout: '../../../layouts/blog-layout.astro'
+  The second problem is that it takes up quite a lot of space on my 2nd desk. We will tackle both problems in this post.
+publishDate: 2022-02-27T21:36:35.128Z
+layout: ../../../layouts/blog-layout.astro
 ---
-
-As I mentioned in a previous post, I have had a 3D printer, the Ender 3 v2. My printer hasn't been off much in those months ([shown by the rolls of filament that have been pushed through it...](https://res.cloudinary.com/sandergnl/image/upload/c_scale,f_auto,q_auto/v1645963067/Spools-of-Filament.jpg)). And although I am very happy with it, my printer has 2 major drawbacks. First of all, it makes quite a lot of noise during printing. I have already partly solved this by installing a quieter fan, but it is still not nice to sit next to it for a whole working day when it's busy with a long print (with headphones on it is doable, but I like not have a headset on all day).
+As I mentioned in a previous post, I have had a 3D printer, the Ender 3 v2. My printer hasn't been off much in those months ([shown by the rolls of filament that have been pushed through it...](https://res.cloudinary.com/sandergnl/image/upload/c_scale,f_auto,q_auto/v1645963067/Spools-of-Filament.jpg)). And although I am very happy with it, my printer has 2 major drawbacks. First of all, it makes quite a lot of noise during printing. I have already partly solved this by installing a quieter fan, but it is still not nice to sit next to it for a whole working day when it's busy with a long print (with headphones on it's doable, but I don't like to have a headset on all day).
 
 The second problem is that it takes up quite a lot of space on my 2nd desk. We will tackle both problems in this post.
 
@@ -52,15 +50,15 @@ In total not as cheap as I assumed in the beginning, but a lot cheaper than buyi
 
 ## Prints
 
-- [bottom_corners.stl](https://www.thingiverse.com/thing:3598219) (all if you want the cable rail on the right, if not, remove the corner with the cable rail from this file)
-- [top_corners.stl](https://www.thingiverse.com/thing:3598219)
-- [hinges.stl](https://www.thingiverse.com/thing:3598219)
-- [bottom_feet.stl](https://www.thingiverse.com/thing:3598219)
-- [Door Handles for LACK Enclosure](https://www.prusaprinters.org/prints/140777-door-handles-for-lack-enclosure)
-- [Side-mounted Spool Holder for LACK Enclosure](https://www.prusaprinters.org/prints/136683-side-mounted-spool-holder-for-lack-enclosures)
-- \*[Parametric Phone Holder for LACK Enclosure](https://www.prusaprinters.org/prints/140799-parametric-phone-holder-for-lack-enclosure)
-- \*[Back Left Leg with Cable Rail for LACK Enclosure](https://www.prusaprinters.org/prints/140787-back-left-leg-with-cable-rail-for-lack-enclosure) (If you want the cable rail on the left)
-- \*[Ender 3 v2 Left Display Mount for LACK Enclosure](https://www.prusaprinters.org/prints/140826-ender-3-v2-left-display-mount-for-lack-enclosure)
+* [bottom_corners.stl](https://www.thingiverse.com/thing:3598219) (all if you want the cable rail on the right, if not, remove the corner with the cable rail from this file)
+* [top_corners.stl](https://www.thingiverse.com/thing:3598219)
+* [hinges.stl](https://www.thingiverse.com/thing:3598219)
+* [bottom_feet.stl](https://www.thingiverse.com/thing:3598219)
+* [Door Handles for LACK Enclosure](https://www.prusaprinters.org/prints/140777-door-handles-for-lack-enclosure)
+* [Side-mounted Spool Holder for LACK Enclosure](https://www.prusaprinters.org/prints/136683-side-mounted-spool-holder-for-lack-enclosures)
+* \*[Parametric Phone Holder for LACK Enclosure](https://www.prusaprinters.org/prints/140799-parametric-phone-holder-for-lack-enclosure)
+* \*[Back Left Leg with Cable Rail for LACK Enclosure](https://www.prusaprinters.org/prints/140787-back-left-leg-with-cable-rail-for-lack-enclosure) (If you want the cable rail on the left)
+* \*[Ender 3 v2 Left Display Mount for LACK Enclosure](https://www.prusaprinters.org/prints/140826-ender-3-v2-left-display-mount-for-lack-enclosure)
 
 \* = Optional
 
