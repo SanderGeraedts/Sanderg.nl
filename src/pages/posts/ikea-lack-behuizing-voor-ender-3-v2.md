@@ -8,7 +8,7 @@ description: >-
   3D printer, de Ender 3 v2. M'n printer heeft in die maanden niet veel
   uitgestaan (te zien aan de rollen filament die er doorheen zijn gejaagd...).
   En hoewel ik er enorm blij mee ben, heeft m'n printer 2 grote nadelen. Als
-  eerste, maakt die best veel gelawaai tijdens het printen. Dit heb ik al deels
+  eerste, maakt die best veel lawaai tijdens het printen. Dit heb ik al deels
   verholpen door een stillere fan te installeren, maar nog steeds is het niet
   fijn om er een hele werkdag langs te zitten als die bezig is met een lange
   print (met een koptelefoon op is het goed te doen, maar ik hou niet van de
