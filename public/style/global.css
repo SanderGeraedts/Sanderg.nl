@@ -138,6 +138,14 @@ pre {
   overflow-x: auto;
 }
 
+html.dark-mode .wrapper > .intro {
+  background: rgba(0, 0, 0, 0.75);
+}
+
+html.light-mode .wrapper > .intro {
+  background: rgba(255, 255, 255, 0.75);
+}
+
 html.dark-mode code,
 html.light-mode code {
   background-color: var(--col-light-gray);
