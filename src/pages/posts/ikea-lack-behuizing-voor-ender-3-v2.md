@@ -17,11 +17,12 @@ description: >-
 publishDate: 2022-02-27T12:08:34.244Z
 layout: ../../layouts/blog-layout.astro
 ---
+
 Zoals ik in een vorige post al heb verteld, heb ik sinds een paar maanden een 3D printer, de Ender 3 v2. M'n printer heeft in die maanden niet veel uitgestaan ([te zien aan de rollen filament die er doorheen zijn gejaagd...](https://res.cloudinary.com/sandergnl/image/upload/c_scale,f_auto,q_auto/v1645963067/Spools-of-Filament.jpg)). En hoewel ik er enorm blij mee ben, heeft m'n printer 2 grote nadelen. Als eerste, maakt die best veel gelawaai tijdens het printen. Dit heb ik al deels verholpen door een stillere fan te installeren, maar nog steeds is het niet fijn om er een hele werkdag langs te zitten als die bezig is met een lange print (met een koptelefoon op is het goed te doen, maar ik hou niet van de hele dag een headset op hebben).
 
 Het tweede probleem is dat die best veel plek in neemt op mijn 2de bureau. Beide problemen gaan we in deze post aanpakken.
 
-![Foto van printer die halve bureau in neemt](https://res.cloudinary.com/sandergnl/image/upload/c_scale,f_auto,q_auto,w_1024/v1645962198/Printer-on-desk_lgsty6.jpg "Enigzins oude foto, er is in de tussentijd nogal wat aan getweaked...")
+![Foto van printer die halve bureau in neemt](https://res.cloudinary.com/sandergnl/image/upload/c_scale,f_auto,q_auto,w_1024/v1645962198/Printer-on-desk_lgsty6.jpg 'Enigszins oude foto, er is in de tussentijd nogal wat aan getweaked...')
 
 De IKEA LACK tafel is binnen de 3D printing community een veel gebruikt product voor het maken van printer behuizingen. Ze zijn goedkoop en de juiste maat voor de meeste printers. Om de Ender 3 v2 er in te laten passen, heb je wel extra geprinte onderdelen nodig. Voor deze build heb ik [deze tutorial](https://www.lets-talk-about.tech/2020/02/3d-printing-famous-ikea-lack-enclosure.html) gevolgd, met een aantal wijzigingen voor persoonlijke voorkeur. Wil je er zelf een maken, kan ik alleen maar aanraden om je eigen aanpassingen te maken. Op het moment van schrijven ben ik er zelf nog niet helemaal mee klaar. Zo wil ik nog wat kabelorganizers printen om te kabels wat netter te maken.
 
@@ -29,7 +30,7 @@ De IKEA LACK tafel is binnen de 3D printing community een veel gebruikt product 
 
 ## Bill of Materials
 
-Grote kans dat als je de materialen beter uitzoekt, je goedkoper uit kan zijn, maar dit zijn alle dingen die ik nodig heb gehad om dit te maken. Schroeven ga ik vanuit dat je die zelf hebt. 
+Grote kans dat als je de materialen beter uitzoekt, je goedkoper uit kan zijn, maar dit zijn alle dingen die ik nodig heb gehad om dit te maken. Schroeven ga ik vanuit dat je die zelf hebt.
 
 |                                                                                                                                                                                                       |             |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
@@ -45,17 +46,19 @@ Grote kans dat als je de materialen beter uitzoekt, je goedkoper uit kan zijn, m
 | [Klein stukje PTFE Buis](https://www.123-3d.nl/123-3D-PTFE-teflon-buis-binnendiameter-2-mm-buitendiameter-4-mm-10-cm-i3434-t372.html)                                                                 | €6,20       |
 | **Totaal**                                                                                                                                                                                            | **€162,75** |
 
+In totaal stiekem niet zo goedkoop als ik in het begin van uit ging, maar een heel stuk goedkoper dan een dedicated enclosure te kopen.
+
 ## Benodigde Prints
 
-* [bottom_corners.stl](https://www.thingiverse.com/thing:3598219) (allemaal als je de cable rail rechts wilt hebben, zo niet, verwijder de hoek met de cable rail uit dit bestand)
-* [top_corners.stl](https://www.thingiverse.com/thing:3598219)
-* [hinges.stl](https://www.thingiverse.com/thing:3598219)
-* [bottom_feet.stl](https://www.thingiverse.com/thing:3598219)
-* [Door Handles for LACK Enclosure](https://www.prusaprinters.org/prints/140777-door-handles-for-lack-enclosure)
-* [Side-mounted Spool Holder for LACK Enclosure](https://www.prusaprinters.org/prints/136683-side-mounted-spool-holder-for-lack-enclosures)
-* \*[Parametric Phone Holder for LACK Enclosure](https://www.prusaprinters.org/prints/140799-parametric-phone-holder-for-lack-enclosure)
-* \*[Back Left Leg with Cable Rail for LACK Enclosure](https://www.prusaprinters.org/prints/140787-back-left-leg-with-cable-rail-for-lack-enclosure) (Als je de cable rail links wilt hebben)
-* \*[Ender 3 v2 Left Display Mount for LACK Enclosure](https://www.prusaprinters.org/prints/140826-ender-3-v2-left-display-mount-for-lack-enclosure)
+- [bottom_corners.stl](https://www.thingiverse.com/thing:3598219) (allemaal als je de cable rail rechts wilt hebben, zo niet, verwijder de hoek met de cable rail uit dit bestand)
+- [top_corners.stl](https://www.thingiverse.com/thing:3598219)
+- [hinges.stl](https://www.thingiverse.com/thing:3598219)
+- [bottom_feet.stl](https://www.thingiverse.com/thing:3598219)
+- [Door Handles for LACK Enclosure](https://www.prusaprinters.org/prints/140777-door-handles-for-lack-enclosure)
+- [Side-mounted Spool Holder for LACK Enclosure](https://www.prusaprinters.org/prints/136683-side-mounted-spool-holder-for-lack-enclosures)
+- \*[Parametric Phone Holder for LACK Enclosure](https://www.prusaprinters.org/prints/140799-parametric-phone-holder-for-lack-enclosure)
+- \*[Back Left Leg with Cable Rail for LACK Enclosure](https://www.prusaprinters.org/prints/140787-back-left-leg-with-cable-rail-for-lack-enclosure) (Als je de cable rail links wilt hebben)
+- \*[Ender 3 v2 Left Display Mount for LACK Enclosure](https://www.prusaprinters.org/prints/140826-ender-3-v2-left-display-mount-for-lack-enclosure)
 
 \* = Optioneel
 
