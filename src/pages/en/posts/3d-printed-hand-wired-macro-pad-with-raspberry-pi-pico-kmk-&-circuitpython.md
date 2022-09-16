@@ -1,6 +1,7 @@
 ---
 title: 3D-printed hand-wired Macro pad with Raspberry Pi Pico, KMK & CircuitPython
-permalink: /posts/3d-printed-hand-wired-macro-pad-met-raspberry-pi-pico-kmk-&-circuitpython
+permalink: /en/posts/3d-printed-hand-wired-macro-pad-with-raspberry-pi-pico-kmk-&-circuitpython
+dutchLink: /posts/3d-printed-hand-wired-macro-pad-met-raspberry-pi-pico-kmk-&-circuitpython
 description: In this post I explain how I designed my macro path, built and
   programmed. Everything is explained step by step so that you too can create
   your own keyboard or macro pad!
@@ -118,6 +119,7 @@ keyboard.keymap = [
         KC.N1,		KC.N2,		KC.N3,	    KC.PLUS,\
 
         KC.N0,		KC.DOT,		KC.EQUAL,   KC.ENTER,\
+
      ],
     
     # Fn Layer
@@ -134,6 +136,7 @@ keyboard.keymap = [
         _______,	_______,	_______,    KC.MINUS,\
 
         _______,	KC.COMMA,	_______,    _______,\
+
      ],
 ]
 
@@ -217,4 +220,15 @@ If you followed these steps, your custom macro path should now work!
 
 ## Step 3: Finishing touches
 
-You should now have a working macro path. If none of the keys work, check that your diodes are in the right direction, that your code is correct, and that you have set the correct GPIO pins. You can also check with a multimeter whether the cables are connected. If not, you know you made a mistake somewhere during the sale
+You should now have a working macro path. If none of the keys work, check that your diodes are in the right direction, that your code is correct, and that you have set the correct GPIO pins. You can also check with a multimeter whether the cables are connected. If not, you know you made a mistake somewhere while soldering, if so, it's probably the code.
+
+I hope you haven't forgotten to turn on those last prints in the meantime? Yes? Then come back after a few hours... Ah, you're back? Beautiful. Now we just need to attach the bottom. In the models I left room for 8 threaded inserts, but you only need the 4 corners. You can never have too many places for screws, because if you don't need them, just don't screw them in like we did here. Finally, I put some felt stickers on it, so that the keypad slides less around on the desk.
+
+![Image of the back cover](/assets/images/pxl_20220916_194802122.jpg)
+
+If you make one, send me a picture! The best way to do that is to upload it as "Make" to Printables, or send me a message via LinkedIn. Have fun building!
+
+## Extra information
+
+* [KMK docs](https://github.com/KMKfw/kmk_firmware)
+* [Zack Freedman - How To Build A Mechanical Keyboard](https://www.youtube.com/watch?v=yYcNi9hKxDk)
