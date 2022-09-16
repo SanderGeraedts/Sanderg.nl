@@ -8,7 +8,6 @@ description: In this post I explain how I designed my macro path, built and
 publishDate: 2022-09-16T16:00:36.128Z
 layout: ../../../layouts/blog-layout.astro
 ---
-
 It's been a while since I've written a post, and a lot has happened in that time. Most importantly, after 3 years I left Sogeti, to continue as a Sr. Frontend Developer at [Total Design](https://www.totaldesign.com/). I've only just started, so I can't say much about it yet, maybe in a future post. With my current schedule, that should probably be around 2023. ;-)
 
 ![Picture of 3d-printed keypad with 24 keys. The number keys are white, the others are yellow. All have the legends painted in.](/assets/images/pxl_20220916_075655587.jpg "Don't mind that spot on the = button, it doesn't exist.")
@@ -33,7 +32,7 @@ If you want to make one too, you'll need the following.
 * 4x M3 screws - €3.29 for a set of 30 including nuts
 * 4x Protective pads - €2,19 for 9
 * Soldering tin - €13.45 for 100g
-* Printed models
+* [Printed models](https://www.printables.com/model/277621-6-x-4-macro-pad-with-number-keys-for-rpi-pico)
 
 ### Tools
 
@@ -226,7 +225,7 @@ I hope you haven't forgotten to turn on those last prints in the meantime? Yes? 
 
 ![Image of the back cover](/assets/images/pxl_20220916_194802122.jpg)
 
-If you make one, send me a picture! The best way to do that is to upload it as "Make" to Printables, or send me a message via LinkedIn. Have fun building!
+If you make one, send me a picture! The best way to do that is to upload it as "Make" to [Printables](https://www.printables.com/model/277621-6-x-4-macro-pad-with-number-keys-for-rpi-pico), or send me a message via LinkedIn. Have fun building!
 
 ## Extra information
 
