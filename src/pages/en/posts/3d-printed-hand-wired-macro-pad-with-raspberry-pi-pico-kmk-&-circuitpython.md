@@ -1,9 +1,9 @@
 ---
 title: 3D-printed hand-wired Macro pad with Raspberry Pi Pico, KMK & CircuitPython
 permalink: /posts/3d-printed-hand-wired-macro-pad-met-raspberry-pi-pico-kmk-&-circuitpython
-description: In this post I explain how I designed my macro path,
-   built and programmed. Everything is explained step by step so that you too can
-   create your own keyboard or macro pad!
+description: In this post I explain how I designed my macro path, built and
+  programmed. Everything is explained step by step so that you too can create
+  your own keyboard or macro pad!
 publishDate: 2022-09-16T16:00:36.128Z
 layout: ../../../layouts/blog-layout.astro
 ---
@@ -96,8 +96,8 @@ keyboard.col_pins = (board.GP16, board.GP17, board.GP18, board.GP19)
 keyboard.diode_orientation = DiodeOrientation.COL2ROW # From Column to Rows, if you switch the polarity, it's ROW2COL
 
 # Cleaner key names
-_______ = KC.TRNS # Transparent -> Clicks through to previous layer
-XXXXXXX = KC.NO # No Action -> Stops click through
+_______ = KC.TRNS   # Transparent   -> Clicks through to previous layer
+XXXXXXX = KC.NO     # No Action     -> Stops click through
 
 FnKey = KC.MO(1)
 
@@ -106,31 +106,65 @@ VIDEO = send_string("https://www.youtube.com/watch?v=dQw4w9WgXcQ") # Very import
 keyboard.keymap = [
     # Base Layer
     [
-        KC.AUDIO_MUTE, KC.LCTL(KC.V), KC.BRIU, KC.AUDIO_VOL_UP, \
-        FnKey, KC.LCTL(KC.C), KC.BRID, KC.AUDIO_VOL_DOWN,\
-        
-        
-        KC.N7, KC.N8, KC.N9, KC.BSPACE,\
-        KC.N4, KC.N5, KC.N6, KC.ASTERISK,\
-        KC.N1, KC.N2, KC.N3, KC.PLUS,
-        KC.N0, KC.DOT, KC.EQUAL, KC.ENTER,\
+        KC.AUDIO_MUTE,  KC.LCTL(KC.V),	KC.BRIU,    KC.AUDIO_VOL_UP, \
+        FnKey,          KC.LCTL(KC.C),	KC.BRID,    KC.AUDIO_VOL_DOWN,\
+      
+        KC.N7,		KC.N8,		KC.N9,	    KC.BSPACE,\
+        KC.N4,		KC.N5,		KC.N6,	    KC.ASTERISK,\
+        KC.N1,		KC.N2,		KC.N3,	    KC.PLUS,
+        KC.N0,		KC.DOT,		KC.EQUAL,   KC.ENTER,\
      ],
     
     # Fn Layer
     [
-        XXXXXXX, VIDEO, XXXXXXX, XXXXXXX, \
-        _______, XXXXXXX, XXXXXXX, XXXXXXX,\
-        
-        
-        _______, _______, _______, KC.DELETE,\
-        _______, _______, _______, KC.SLASH,\
-        _______, _______, _______, KC.MINUS,
-        _______, KC.COMMA, _______, _______,\
+        XXXXXXX,	VIDEO,	    	XXXXXXX,    XXXXXXX, \
+        _______,	XXXXXXX,	XXXXXXX,    XXXXXXX,\
+      
+        _______,	_______,	_______,    KC.DELETE,\
+        _______,	_______,	_______,    KC.SLASH,\
+        _______,	_______,	_______,    KC.MINUS,
+        _______,	KC.COMMA,	_______,    _______,\
      ],
 ]
 
 if __name__ == '__main__':
     keyboard.go()
+```
+
+### Boot.py
+
+```python
+import supervisor
+import board
+import digitalio
+import storage
+import usb_cdc
+import usb_hid
+
+# This is from the base kmk boot.py
+supervisor.set_next_stack_limit(4096 + 4096)
+
+# If this key is held during boot, don't run the code which hides the storage and disables serial
+# To use another key just count its row and column and use those pins
+# You can also use any other pins not already used in the matrix and make a button just for accesing your storage
+#
+# GP16 <-> GP9 is our Fn key. if yours maps to different ports, update it here. Else you won't be able to update
+# your firmware anylonger.
+col = digitalio.DigitalInOut(board.GP16)
+row = digitalio.DigitalInOut(board.GP9)
+
+# TODO: If your diode orientation is ROW2COL, then make row the output and col the input
+col.switch_to_output(value=True)
+row.switch_to_input(pull=digitalio.Pull.DOWN)
+
+if not row.value:
+    storage.disable_usb_drive()
+    # Equivalent to usb_cdc.enable(console=False, data=False)
+    usb_cdc.disable()
+    usb_hid.enable(boot_device=1)
+
+row.deinit()
+col.deinit()
 ```
 
 ### Boot.py
