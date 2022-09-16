@@ -106,26 +106,24 @@ VIDEO = send_string("https://www.youtube.com/watch?v=dQw4w9WgXcQ") # Very import
 keyboard.keymap = [
     # Base Layer
     [
-        KC.AUDIO_MUTE,	KC.LCTL(KC.V),		KC.BRIU,		KC.AUDIO_VOL_UP, \
-        FnKey,			KC.LCTL(KC.C),		KC.BRID,		KC.AUDIO_VOL_DOWN,\
-        
-        
-        KC.N7,			KC.N8,				KC.N9,			KC.BSPACE,\
-        KC.N4,			KC.N5,				KC.N6,			KC.ASTERISK,\
-        KC.N1,			KC.N2,				KC.N3,			KC.PLUS,
-        KC.N0,			KC.DOT,				KC.EQUAL,		KC.ENTER,\
+        KC.AUDIO_MUTE,  KC.LCTL(KC.V),	KC.BRIU,    KC.AUDIO_VOL_UP, \
+        FnKey,          KC.LCTL(KC.C),	KC.BRID,    KC.AUDIO_VOL_DOWN,\
+      
+        KC.N7,		KC.N8,		KC.N9,	    KC.BSPACE,\
+        KC.N4,		KC.N5,		KC.N6,	    KC.ASTERISK,\
+        KC.N1,		KC.N2,		KC.N3,	    KC.PLUS,
+        KC.N0,		KC.DOT,		KC.EQUAL,   KC.ENTER,\
      ],
     
     # Fn Layer
     [
-        XXXXXXX,		VIDEO,	    		XXXXXXX,		XXXXXXX, \
-        _______,		XXXXXXX,			XXXXXXX,		XXXXXXX,\
-        
-        
-        _______,		_______,			_______,		KC.DELETE,\
-        _______,		_______,			_______,		KC.SLASH,\
-        _______,		_______,			_______,		KC.MINUS,
-        _______,		KC.COMMA,			_______,		_______,\
+        XXXXXXX,	VIDEO,	    	XXXXXXX,    XXXXXXX, \
+        _______,	XXXXXXX,	XXXXXXX,    XXXXXXX,\
+      
+        _______,	_______,	_______,    KC.DELETE,\
+        _______,	_______,	_______,    KC.SLASH,\
+        _______,	_______,	_______,    KC.MINUS,
+        _______,	KC.COMMA,	_______,    _______,\
      ],
 ]
 
