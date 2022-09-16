@@ -1,6 +1,6 @@
 ---
 title: 3D-printed hand-wired Macro pad met Raspberry Pi Pico, KMK & CircuitPython
-permalink: /posts/3d-printed-hand-wired-macro-pad-met-raspberry-pi-pico-kmk-&-circuitpython
+permalink: /posts/3d-printed-hand-wired-macro-pad-met-raspberry-pi-pico-kmk-circuitpython
 englishLink: /en/posts/3d-printed-hand-wired-macro-pad-with-raspberry-pi-pico-kmk-&-circuitpython
 description: In deze post leg ik uit hoe ik mijn macro pad heb ontworpen,
   gebouwd en geprogrammeerd. Alles wordt stap voor stap uitgelegd zodat ook jij
@@ -32,7 +32,7 @@ Als jij er ook een wilt maken, heb je het volgende nodig.
 * 4x M3 schroeven - €3,29 voor een set van 30 inclusief moeren
 * 4x Beschermviltjes - €2,19 voor 9
 * Soldeertin - €13,45 voor 100g
-* Geprinte modellen
+* [Geprinte modellen](https://www.printables.com/model/277621-6-x-4-macro-pad-with-number-keys-for-rpi-pico)
 
 ### Gereedschap
 
@@ -115,7 +115,7 @@ keyboard.keymap = [
 
         KC.N4,		KC.N5,		KC.N6,	    KC.ASTERISK,\
 
-        KC.N1,		KC.N2,		KC.N3,	    KC.PLUS,
+        KC.N1,		KC.N2,		KC.N3,	    KC.PLUS,\
 
         KC.N0,		KC.DOT,		KC.EQUAL,   KC.ENTER,\
 
@@ -132,7 +132,7 @@ keyboard.keymap = [
 
         _______,	_______,	_______,    KC.SLASH,\
 
-        _______,	_______,	_______,    KC.MINUS,
+        _______,	_______,	_______,    KC.MINUS,\
 
         _______,	KC.COMMA,	_______,    _______,\
 
@@ -189,7 +189,7 @@ Ik hoop dat je in de tussentijd niet bent vergeten die laatste prints aan te zet
 
 ![Afbeelding van de achterkant](/assets/images/pxl_20220916_194802122.jpg)
 
-Als je er een maakt, stuur me een foto door! Het beste kan je dat doen door het als "Make" te uploaden naar Printables, of anders me een berichtje te sturen via LinkedIn. Veel bouw plezier!
+Als je er een maakt, stuur me een foto door! Het beste kan je dat doen door het als "Make" te uploaden naar [Printables](https://www.printables.com/model/277621-6-x-4-macro-pad-with-number-keys-for-rpi-pico), of anders me een berichtje te sturen via LinkedIn. Veel bouw plezier!
 
 ## Extra info
 
