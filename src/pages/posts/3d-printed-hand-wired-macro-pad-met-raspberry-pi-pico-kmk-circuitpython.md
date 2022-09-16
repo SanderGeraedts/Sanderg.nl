@@ -1,6 +1,7 @@
 ---
 title: 3D-printed hand-wired Macro pad met Raspberry Pi Pico, KMK & CircuitPython
 permalink: /posts/3d-printed-hand-wired-macro-pad-met-raspberry-pi-pico-kmk-&-circuitpython
+englishLink: /en/posts/3d-printed-hand-wired-macro-pad-with-raspberry-pi-pico-kmk-&-circuitpython
 description: In deze post leg ik uit hoe ik mijn macro pad heb ontworpen,
   gebouwd en geprogrammeerd. Alles wordt stap voor stap uitgelegd zodat ook jij
   een eigen toetsenbord of macro pad kan maken!
