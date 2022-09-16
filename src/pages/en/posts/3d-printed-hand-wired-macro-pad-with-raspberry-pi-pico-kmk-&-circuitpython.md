@@ -2,7 +2,7 @@
 title: 3D-printed hand-wired Macro pad with Raspberry Pi Pico, KMK & CircuitPython
 permalink: /en/posts/3d-printed-hand-wired-macro-pad-with-raspberry-pi-pico-kmk-&-circuitpython
 dutchLink: /posts/3d-printed-hand-wired-macro-pad-met-raspberry-pi-pico-kmk-circuitpython
-description: In this post I explain how I designed my macro path, built and
+description: In this post I explain how I designed my macro pad, built and
   programmed. Everything is explained step by step so that you too can create
   your own keyboard or macro pad!
 publishDate: 2022-09-16T16:00:36.128Z
@@ -12,11 +12,11 @@ It's been a while since I've written a post, and a lot has happened in that time
 
 ![Picture of 3d-printed keypad with 24 keys. The number keys are white, the others are yellow. All have the legends painted in.](/assets/images/pxl_20220916_075655587.jpg "Don't mind that spot on the = button, it doesn't exist.")
 
-In this post I want to explain how I created my new macro path, but first maybe an explanation of why I created it. My ultimate goal is to build a split keyboard, specifically the Redox v1.
+In this post I want to explain how I created my new macro pad, but first maybe an explanation of why I created it. My ultimate goal is to build a split keyboard, specifically the Redox v1.
 
 ![Picture of a column staggered split keyboard, the redox v1](/assets/images/redox.webp)
 
-The thing is that making a whole keyboard right away is brave. The last time I successfully soldered was sometime in my youth when I took an electro-mechanics course. There's a good chance I'm taking too much on my fork with a full keyboard. A macro path is a lot cheaper, less work, and with how I designed it, I can reuse a lot of the parts if it should fail. I have so much confidence in myself...
+The thing is that making a whole keyboard right away is brave. The last time I successfully soldered was sometime in my youth when I took an electro-mechanics course. There's a good chance I'm taking too much on my fork with a full keyboard. A macro pad is a lot cheaper, less work, and with how I designed it, I can reuse a lot of the parts if it should fail. I have so much confidence in myself...
 
 The Redox, like most split keyboards, has no number pad. When I create 3d designs in Fusion 360, I often enter numbers via the number pad because it works faster for me, so it's essential for me, but not essential enough to have it on my desk all the time.
 
@@ -47,7 +47,7 @@ The biggest expense was in the switches, and I admit I could have gotten them a 
 
 ## Step 1: Assembly
 
-If you want to make this macro path in a weekend, the first print you need to turn on is the top plate. You can print the other prints later, but without the top plate you can't start soldering. You can get the whole project workable before you print the keycaps and the bottom. In terms of print settings, I printed the case with a 0.6mm nozzle with 0.45mm layer heights, to have it ready as soon as possible. The keycaps are done with a 0.4mm nozzle on 0.16mm layers.
+If you want to make this macro pad in a weekend, the first print you need to turn on is the top plate. You can print the other prints later, but without the top plate you can't start soldering. You can get the whole project workable before you print the keycaps and the bottom. In terms of print settings, I printed the case with a 0.6mm nozzle with 0.45mm layer heights, to have it ready as soon as possible. The keycaps are done with a 0.4mm nozzle on 0.16mm layers.
 
 When the printer is ready, you can start pressing the buttons in the print. Make sure you do them all the same. With Cherry MX switches you can make sure that the logo is at the top.
 
@@ -179,47 +179,11 @@ row.deinit()
 col.deinit()
 ```
 
-### Boot.py
-
-```python
-import supervisor
-import board
-import digitalio
-import storage
-import usb_cdc
-import usb_hid
-
-# This is from the base kmk boot.py
-supervisor.set_next_stack_limit(4096 + 4096)
-
-# If this key is held during boot, don't run the code which hides the storage and disables serial
-# To use another key just count its row and column and use those pins
-# You can also use any other pins not already used in the matrix and make a button just for accessing your storage
-#
-# GP16 <-> GP9 is our Fn key. if yours maps to different ports, update it here. Else you won't be able to update
-# your firmware anylonger.
-col = digitalio.DigitalInOut(board.GP16)
-row = digitalio.DigitalInOut(board.GP9)
-
-# TODO: If your diode orientation is ROW2COL, then make row the output and col the input
-col.switch_to_output(value=True)
-row.switch_to_input(pull=digitalio.Pull.DOWN)
-
-if not row.value:
-    storage.disable_usb_drive()
-    # Equivalent to usb_cdc.enable(console=False, data=False)
-    usb_cdc.disable()
-    usb_hid.enable(boot_device=1)
-
-row.deinit()
-col.deinit()
-```
-
-If you followed these steps, your custom macro path should now work!
+If you followed these steps, your custom macro pad should now work!
 
 ## Step 3: Finishing touches
 
-You should now have a working macro path. If none of the keys work, check that your diodes are in the right direction, that your code is correct, and that you have set the correct GPIO pins. You can also check with a multimeter whether the cables are connected. If not, you know you made a mistake somewhere while soldering, if so, it's probably the code.
+You should now have a working macro pad. If none of the keys work, check that your diodes are in the right direction, that your code is correct, and that you have set the correct GPIO pins. You can also check with a multimeter whether the cables are connected. If not, you know you made a mistake somewhere while soldering, if so, it's probably the code.
 
 I hope you haven't forgotten to turn on those last prints in the meantime? Yes? Then come back after a few hours... Ah, you're back? Beautiful. Now we just need to attach the bottom. In the models I left room for 8 threaded inserts, but you only need the 4 corners. You can never have too many places for screws, because if you don't need them, just don't screw them in like we did here. Finally, I put some felt stickers on it, so that the keypad slides less around on the desk.
 
