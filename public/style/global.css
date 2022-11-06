@@ -146,14 +146,21 @@ table {
   border-spacing: 0;
   border-top: 0.5rem solid var(--col-lighter-gray);
   border-bottom: 0.5rem solid var(--col-lighter-gray);
+  border-color: transparent;
 }
 
 tr:nth-child(even) {
   background-color: var(--col-lighter-gray);
 }
 
-table td {
+table td,
+table th {
   padding: 0 0.5rem;
+}
+
+table th {
+  text-align: left;
+  background-color: var(--col-light-gray);
 }
 
 html.dark-mode .wrapper > .intro {
