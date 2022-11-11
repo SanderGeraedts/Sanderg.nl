@@ -1,7 +1,7 @@
 ---
 title: 'How To: Split Keyboard met RP2040 en KMK'
-permalink: /posts/how-to-split-keyboard-met-rp2040-en-KMK
-englishLink: /en/posts/how-to-split-keyboard-on-rp2040-with-KMK
+permalink: /posts/how-to-split-keyboard-met-rp2040-en-kmk
+englishLink: /en/posts/how-to-split-keyboard-with-rp2040-and-kmk
 description: In deze post leg ik uit hoe ik mijn Redox v1 Split Keyboard heb gemaakt op basis van een RP2040-based microcontroller, de Raspberry Pi Pico, met KMK als firmware.
 publishDate: 2022-11-06T20:00:00.969Z
 layout: ../../layouts/blog-layout.astro
