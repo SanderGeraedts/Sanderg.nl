@@ -1,11 +1,13 @@
 ---
-title: 'How To: Split Keyboard with RP2040 and KMK'
+title: "How To: Split Keyboard with RP2040 and KMK"
 permalink: /en/posts/how-to-split-keyboard-with-rp2040-and-kmk
+lang: en
 dutchLink: /posts/how-to-split-keyboard-met-rp2040-en-kmk
-description: In this post I explain how I made my Redox v1 Split Keyboard based on an RP2040-based microcontroller, the Raspberry Pi Pico, with KMK as firmware.
-publishDate: 2022-11-06T20:00:00.969Z
+description: In this post I explain how I made my Redox v1 Split Keyboard based
+  on an RP2040-based microcontroller, the Raspberry Pi Pico, with KMK as
+  firmware.
+publishDate: 2022-11-12T11:00:13.063Z
 layout: ../../../layouts/blog-layout.astro
-lang: 'en'
 ---
 
 In my previous blog post I explained how I created [my macropad](/posts/3d-printed-hand-wired-macro-pad-with-raspberry-pi-pico-kmk-circuitpython). In that post I hinted that I want to make a split keyboard, specifically the Redox v1, but I didn't. I didn't make a split keyboard, I've already made 2 of them.
