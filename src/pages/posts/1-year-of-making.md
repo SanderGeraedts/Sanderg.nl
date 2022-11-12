@@ -9,8 +9,6 @@ description: Op het moment van schrijven is het 1 jaar geleden dat ik mijn 3d
 publishDate: 2022-11-12T17:00:42.768Z
 layout: ../../layouts/blog-layout.astro
 ---
-
-
 Op het moment van schrijven is het 1 jaar geleden dat ik mijn 3d printer heb gekregen. Mijn 3d printer is mijn gateway drug geweest in het maken van fysieke projecten, dus zijn verjaardag is het perfecte moment om terug te kijken op wat ik het afgelopen jaar allemaal heb gemaakt.
 
 ## E﻿erste prints
@@ -27,10 +25,14 @@ D﻿e 2de print was een Benchy. Een Benchy is een standaard test print die snel 
 
 A﻿ls je een printer koopt, zijn er heel veel vrienden en familie willen dat je spul voor hun print. Aangezien de meeste dingen klein zijn, en filament goedkoop, kosten ze centen per stuk, maar het zorgt wel voor een eindeloze stroom aan nutteloze rotzooi. Vooral m'n verloofde was heel erg fan van hebbedingetjes printen.
 
-![](https://res.cloudinary.com/sandergnl/image/upload/c_fill,h_1024,w_1024/v1668263324/UselessCrapPart3_j6a1xt.jpg)
+![Minimalistic animal crossing switch controller](https://res.cloudinary.com/sandergnl/image/upload/c_fill,h_1024,w_1024/v1668263324/UselessCrapPart3_j6a1xt.jpg)
 
 J﻿a, dit was in de tijd toen Animal Crossing net uitkwam.
 
-![](https://res.cloudinary.com/sandergnl/image/upload/c_scale,f_auto,q_auto,w_1024/v1668263324/UselessCrapPart1_pdr4ir.jpg)
+![Animal Crossing Controller voor Switch](https://res.cloudinary.com/sandergnl/image/upload/c_scale,f_auto,q_auto,w_1024/v1668263324/UselessCrapPart1_pdr4ir.jpg "Ja, ik heb mezelf gestoken toen ik de supports ertussen uit aant prikken was.")
 
-![](https://res.cloudinary.com/sandergnl/image/upload/c_scale,f_auto,q_auto,w_1024/v1668263327/UselessCrapPart2_bvzcpa.jpg)
+![Nameplate voor Hanna](https://res.cloudinary.com/sandergnl/image/upload/c_scale,f_auto,q_auto,w_1024/v1668263327/UselessCrapPart2_bvzcpa.jpg)
+
+## E﻿erste eigen ontwerpen
+
+I﻿n mijn [eerste post over 3D Printen](https://sanderg.nl/posts/een-extra-dimensie-3d-printing/)
