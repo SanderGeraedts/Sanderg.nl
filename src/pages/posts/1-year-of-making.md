@@ -9,7 +9,6 @@ description: Op het moment van schrijven is het 1 jaar geleden dat ik mijn 3d
 publishDate: 2022-11-12T17:00:42.768Z
 layout: ../../layouts/blog-layout.astro
 ---
-
 Op het moment van schrijven is het 1 jaar geleden dat ik mijn 3d printer heb gekregen. Mijn 3d printer is mijn gateway drug geweest in het maken van fysieke projecten, dus zijn verjaardag is het perfecte moment om terug te kijken op wat ik het afgelopen jaar allemaal heb gemaakt.
 
 ## Eerste prints
@@ -30,7 +29,7 @@ Als je een printer koopt, zijn er heel veel vrienden en familie willen dat je sp
 
 Ja, dit was in de tijd toen Animal Crossing net uitkwam.
 
-![Animal Crossing Controller voor Switch](https://res.cloudinary.com/sandergnl/image/upload/c_scale,f_auto,q_auto,w_1024/v1668263324/UselessCrapPart1_pdr4ir.jpg 'Ja, ik heb mezelf gestoken toen ik de supports ertussen uit aant prikken was.')
+![Animal Crossing Controller voor Switch](https://res.cloudinary.com/sandergnl/image/upload/c_scale,f_auto,q_auto,w_1024/v1668263324/UselessCrapPart1_pdr4ir.jpg "Ja, ik heb mezelf gestoken toen ik de supports ertussen uit aant prikken was.")
 
 ![Nameplate voor Hanna](https://res.cloudinary.com/sandergnl/image/upload/c_scale,f_auto,q_auto,w_1024/v1668263327/UselessCrapPart2_bvzcpa.jpg)
 
@@ -118,12 +117,12 @@ Aangezien deze post al te lang begint te worden, moet ik een hele boel dingen vo
 
 Als laatste wil ik je nog wat links geven naar channels die mij enorm geholpen hebben om dingen uit te proberen:
 
-- [Zack Freedman / Voidstar Labs](https://www.youtube.com/c/ZackFreedman)
-- [I Like To Make Stuff](https://www.youtube.com/c/Iliketomakestuff)
-- [Evan and Katelyn](https://www.youtube.com/c/EvanAndKatelyn) (Warning: They are **very** American)
-- [Morley Kert](https://www.youtube.com/c/MorleyKert)
-- [Maker's Muse](https://www.youtube.com/c/MakersMuse)
-- [CNC Kitchen](https://www.youtube.com/c/CNCKitchen)
-- [Thomas Sanladerer](https://www.youtube.com/user/ThomasSanladerer)
-- [3D Printy](https://www.youtube.com/c/3DPrinty)
-- [Product Design Online](https://www.youtube.com/c/ProductDesignOnline)
+* [Zack Freedman / Voidstar Labs](https://www.youtube.com/c/ZackFreedman)
+* [I Like To Make Stuff](https://www.youtube.com/c/Iliketomakestuff)
+* [Evan and Katelyn](https://www.youtube.com/c/EvanAndKatelyn) (Warning: They are **very** American)
+* [Morley Kert](https://www.youtube.com/c/MorleyKert)
+* [Maker's Muse](https://www.youtube.com/c/MakersMuse)
+* [CNC Kitchen](https://www.youtube.com/c/CNCKitchen)
+* [Thomas Sanladerer](https://www.youtube.com/user/ThomasSanladerer)
+* [3D Printy](https://www.youtube.com/c/3DPrinty)
+* [Product Design Online](https://www.youtube.com/c/ProductDesignOnline)
