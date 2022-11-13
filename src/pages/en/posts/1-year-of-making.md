@@ -1,14 +1,14 @@
 ---
 title: 1 Year of Making
 permalink: /en/posts/1-year-of-making
+lang: en
 dutchLink: /posts/1-year-of-making
-description: At the time of writing, it's been 1 year since I got my 3d
-  got a printer. My 3d printer has been my gateway drug in the
-  making physical projects, so his birthday is the perfect time to
-  looking back on what I've made over the past year.
+description: At the time of writing, it's been 1 year since I got my 3d got a
+  printer. My 3d printer has been my gateway drug in the making physical
+  projects, so his birthday is the perfect time to looking back on what I've
+  made over the past year.
 publishDate: 2022-11-12T17:00:42.768Z
 layout: ../../../layouts/blog-layout.astro
-lang: en
 ---
 
 At the time of writing, it's been 1 year since I got my 3d got a printer. My 3d printer has been my gateway drug in the making physical projects, so his birthday is the perfect time to looking back on what I've made over the past year.
@@ -31,7 +31,7 @@ When you buy a printer, a lot of friends and family want you stuff for their pri
 
 Yes, this was back when Animal Crossing just came out.
 
-![Animal Crossing Controller for Switch](https://res.cloudinary.com/sandergnl/image/upload/c_scale,f_auto,q_auto,w_1024/v1668263324/UselessCrapPart1_pdr4ir.jpg 'Yeah, I stabbed myself when I put the supports in between was pricking out.')
+![Animal Crossing Controller for Switch](https://res.cloudinary.com/sandergnl/image/upload/c_scale,f_auto,q_auto,w_1024/v1668263324/UselessCrapPart1_pdr4ir.jpg "Yeah, I stabbed myself when I put the supports in between was pricking out.")
 
 ![Nameplate for Hanna](https://res.cloudinary.com/sandergnl/image/upload/c_scale,f_auto,q_auto,w_1024/v1668263327/UselessCrapPart2_bvzcpa.jpg)
 
@@ -57,7 +57,7 @@ Why did I print them in 2 different colors? Murphy is also an asshole.
 
 ## Printer Upgrades
 
-Over the year I've been tinkering with my printer a lot, but because Cloudinary gets angry when I request hundreds of photos per page, I limit myself to 2. First OctoPrint. [OctoPrint](https://octoprint.org/) is an open-source software package that allows you to wirelessly control your printer and monitor it with a webcam. In general, Octoprint runs on a Raspberry Pi with the operating system [OctoPi](https://github.com/guysoft/OctoPi), but you can also run it on certain Android phones with the app [Octo4A](https:// github.com/feelfreelinux/octo4a). The latter has the advantage that you do not have to buy a separate webcam, because the phone already has a built-in camera. The camera stream is a lot less reliable than on an RPI, but I've never had printing problems with it. In April I upgraded to an RPI with camera, because there just wasn't a nice reliable place to fix the rather loose cable in my lack enclosure.
+Over the year I've been tinkering with my printer a lot, but because Cloudinary gets angry when I request hundreds of photos per page, I limit myself to 2. First OctoPrint. [OctoPrint](https://octoprint.org/) is an open-source software package that allows you to wirelessly control your printer and monitor it with a webcam. In general, Octoprint runs on a Raspberry Pi with the operating system [OctoPi](https://github.com/guysoft/OctoPi), but you can also run it on certain Android phones with the app [Octo4A](https://github.com/feelfreelinux/octo4a). The latter has the advantage that you do not have to buy a separate webcam, because the phone already has a built-in camera. The camera stream is a lot less reliable than on an RPI, but I've never had printing problems with it. In April I upgraded to an RPI with camera, because there just wasn't a nice reliable place to fix the rather loose cable in my lack enclosure.
 
 ![Octoprint Arm with phone running Octo4A](https://res.cloudinary.com/sandergnl/image/upload/c_scale,f_auto,q_auto,w_1024/v1645962198/Printer-on-desk_lgsty6.jpg)
 
