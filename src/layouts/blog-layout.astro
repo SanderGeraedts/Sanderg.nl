@@ -1,26 +1,16 @@
 ---
-import { Markdown } from 'astro/components';
 import HeadBase from '../components/HeadBase.astro';
 import Wrapper from '../components/Wrapper.astro';
 import Layout from '../layouts/layout.astro';
 
 const {content} = Astro.props;
-const {title, description, publishDate, author, heroImage, permalink, lang, dutchLink, englishLink} = content;
+const {title, description, publishDate, permalink, lang, dutchLink, englishLink} = content;
 
 const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
 
 const removeTags = (string) => {
     const regex = /(<([^>]+)>)/ig
     return string.replace(regex, "")
-}
-
-const showLanguageBanner = () => {
-    if(englishLink) {
-        return <p class="language-banner i">Hey, more comfortable in English? Here's the <a href={englishLink}>English version of this post</a>!</p>
-    }
-    if(dutchLink) {
-        return <p class="language-banner i">Hey, liever de Nederlandse versie? Hier is <a href={dutchLink}>de post in het Nederlands</a>!</p>
-    }
 }
 ---
 
@@ -31,7 +21,8 @@ const showLanguageBanner = () => {
             <h1 class="title">{title}</h1>
             <p class="publishDate">{(lang === "en") ? "Last updated at " : "Laatst bijwerkt op "}{new Date(publishDate).toLocaleDateString(`${(lang) ? lang : 'nl-NL'}`, options)}.</p>
         </header>
-        { showLanguageBanner()}
+        { englishLink && <p class="language-banner i">Hey, more comfortable in English? Here's the <a href={englishLink}>English version of this post</a>!</p>}
+        { dutchLink && <p class="language-banner i">Hey, liever de Nederlandse versie? Hier is <a href={dutchLink}>de post in het Nederlands</a>!</p>}
         <slot />
     </div>
     </Wrapper>

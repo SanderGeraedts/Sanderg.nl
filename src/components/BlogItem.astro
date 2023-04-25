@@ -6,17 +6,17 @@ export interface Props {
 const { post } = Astro.props;
 
 const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-const publishDate = new Date(post.publishDate);
+const publishDate = new Date(post.frontmatter.publishDate);
 ---
 
 <article class="postPreview">
     <header>
-        <a href={post.url}><h2 class="title">{post.title}</h2></a>
+        <a href={post.url}><h2 class="title">{post.frontmatter.title}</h2></a>
         <p class="publishDate">{publishDate.toLocaleDateString('nl-NL', options)}</p>
     </header>
     <main>
         <p>
-        {post.description}{" "}<a class="d-inline fw-600" href={post.url}>Verder lezen</a>
+        {post.frontmatter.description}{" "}<a class="d-inline fw-600" href={post.url}>Verder lezen</a>
         </p>
     </main>
 </article>
