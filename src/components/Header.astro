@@ -2,36 +2,36 @@
 import Logo from "./Logo.astro";
 import DarkmodeToggle from "./DarkmodeToggle.astro";
 import Wrapper from "./Wrapper.astro";
-
 ---
+
 <nav>
-    <ul>
-        <li>
-            <a href="/">Home</a>
-        </li>
-        <li>
-            <a href="/posts">Blog</a>
-        </li>
-        <li class="logo">
-            <Logo />
-        </li>
-        <li>
-            <a href="/portfolio">Portfolio</a>
-        </li>
-        <li>
-            <a href="/contact">Contact</a>
-        </li>
-        <li class="dark-mode">
-            <DarkmodeToggle />
-        </li>
-    </ul>
+  <ul>
+    <li>
+      <a href="/">Home</a>
+    </li>
+    <li>
+      <a href="/posts">Blog</a>
+    </li>
+    <li class="logo">
+      <Logo />
+    </li>
+    <li>
+      <a href="/projects">Stuff I Made</a>
+    </li>
+    <li>
+      <a href="/contact">Contact</a>
+    </li>
+    <li class="dark-mode">
+      <DarkmodeToggle />
+    </li>
+  </ul>
 </nav>
 
 <style>
-.spacer {
+  .spacer {
     margin-right: auto;
-}
-ul {
+  }
+  ul {
     display: flex;
     list-style: none;
     justify-content: center;
@@ -40,36 +40,34 @@ ul {
     gap: 2rem;
     margin: 10px 0;
     padding: 0;
-}
+  }
 
-a {
+  a {
     color: var(--col-black);
     text-decoration: none;
     font-weight: var(--fw-semi-bold);
-}
+  }
 
-.dark-mode {
+  .dark-mode {
     position: absolute;
     right: 1rem;
-}
+  }
 
-@media (max-width: 1024px) {
-ul {
-    flex-wrap: wrap;
-}
+  @media (max-width: 1024px) {
+    ul {
+      flex-wrap: wrap;
+    }
 
-.logo {
-    display: flex;
-    order: -1;
-    flex-basis: 100%;
-    justify-content: center;
-}
+    .logo {
+      display: flex;
+      order: -1;
+      flex-basis: 100%;
+      justify-content: center;
+    }
 
-.dark-mode {
-    top: 0.5rem;
-    right: 0.5rem;
-}
-}
-
-
+    .dark-mode {
+      top: 0.5rem;
+      right: 0.5rem;
+    }
+  }
 </style>

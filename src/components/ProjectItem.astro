@@ -1,0 +1,54 @@
+---
+export interface Props {
+  project: any;
+}
+
+const { project } = Astro.props;
+
+const options = {
+  weekday: "long",
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+};
+const publishDate = new Date(project.frontmatter.publishDate);
+---
+
+<article class="projectPreview">
+  <header>
+    <a href={project.url}
+      ><h2 class="title">
+        {project.frontmatter.title} - {project.frontmatter.status}
+      </h2></a
+    >
+    <p class="publishDate">
+      {publishDate.toLocaleDateString("nl-NL", options)}
+    </p>
+  </header>
+  <main>
+    <img src={project.frontmatter.imageUrl} alt={project.frontmatter.title} />
+    <p>
+      {project.frontmatter.description}
+    </p>
+  </main>
+</article>
+
+<style>
+  .publishDate {
+    font-style: italic;
+    margin-top: 0;
+    color: var(--col-gray);
+  }
+
+  .publishDate:first-letter {
+    text-transform: capitalize;
+  }
+
+  header h2 {
+    margin-bottom: -0.25rem;
+  }
+
+  main img {
+    width: 100%;
+  }
+</style>

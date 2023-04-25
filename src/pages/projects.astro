@@ -1,0 +1,23 @@
+---
+import Layout from "../layouts/layout.astro";
+import Title from "../components/Title.astro";
+import ProjectItem from "../components/ProjectItem.astro";
+import Wrapper from "../components/Wrapper.astro";
+
+const allProjects = await Astro.glob("./projects/*.md");
+---
+
+<Layout
+  title="Stuff I Made - Sanderg.nl"
+  description="Hey, ik ben Sander Geraedts. Front-end Developer bij Sogeti, hardloper, en baasje van de veel te schattige puppy Luna."
+  permalink="/projects"
+>
+  <Wrapper>
+    <Title title="Stuff I Made">
+      Een dumping ground voor projecten die ik heb gemaakt of nog mee bezig ben.
+    </Title>
+    <div class="projects">
+      {allProjects.map((p) => <ProjectItem project={p} />)}
+    </div>
+  </Wrapper>
+</Layout>

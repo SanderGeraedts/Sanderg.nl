@@ -1,33 +1,76 @@
 backend:
   name: git-gateway
   branch: master # Branch to update (optional; defaults to master)
-media_folder: 'public/assets/images'
-public_folder: '/assets/images'
+media_folder: "public/assets/images"
+public_folder: "/assets/images"
 publish_mode: editorial_workflow
 
 collections:
-  - name: 'posts-NL'
-    label: 'Dutch Posts'
-    folder: 'src/pages/posts'
+  - name: "posts-NL"
+    label: "Dutch Posts"
+    folder: "src/pages/posts"
     create: true
     fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Permalink', name: 'permalink', widget: 'string' }
-      - { label: 'English Link', name: 'englishLink', widget: 'string', required: false }
-      - { label: 'Description', name: 'description', widget: 'text' }
-      - { label: 'Publish Date', name: 'publishDate', widget: 'datetime' }
-      - { label: 'Layout', name: 'layout', widget: 'hidden', default: '../../layouts/blog-layout.astro' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
-  - name: 'posts-EN'
-    label: 'English Posts'
-    folder: 'src/pages/en/posts'
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Permalink", name: "permalink", widget: "string" }
+      - {
+          label: "English Link",
+          name: "englishLink",
+          widget: "string",
+          required: false,
+        }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Publish Date", name: "publishDate", widget: "datetime" }
+      - {
+          label: "Layout",
+          name: "layout",
+          widget: "hidden",
+          default: "../../layouts/blog-layout.astro",
+        }
+      - { label: "Body", name: "body", widget: "markdown" }
+  - name: "posts-EN"
+    label: "English Posts"
+    folder: "src/pages/en/posts"
     create: true
     fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Permalink', name: 'permalink', widget: 'string' }
-      - { label: 'Language', name: 'lang', widget: 'hidden', default: 'en' }
-      - { label: 'Dutch Link', name: 'dutchLink', widget: 'string', required: false }
-      - { label: 'Description', name: 'description', widget: 'text' }
-      - { label: 'Publish Date', name: 'publishDate', widget: 'datetime' }
-      - { label: 'Layout', name: 'layout', widget: 'hidden', default: '../../../layouts/blog-layout.astro' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Permalink", name: "permalink", widget: "string" }
+      - { label: "Language", name: "lang", widget: "hidden", default: "en" }
+      - {
+          label: "Dutch Link",
+          name: "dutchLink",
+          widget: "string",
+          required: false,
+        }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Publish Date", name: "publishDate", widget: "datetime" }
+      - {
+          label: "Layout",
+          name: "layout",
+          widget: "hidden",
+          default: "../../../layouts/blog-layout.astro",
+        }
+      - { label: "Body", name: "body", widget: "markdown" }
+  - name: "projects"
+    label: "Stuff I made"
+    folder: "src/content/projects"
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Permalink", name: "permalink", widget: "string" }
+      - { label: "Publish Date", name: "publishDate", widget: "datetime" }
+      - { label: "Image Link", name: "imageURL", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - {
+          label: "Layout",
+          name: "layout",
+          widget: "hidden",
+          default: "../../../layouts/blog-layout.astro",
+        }
+      - {
+          label: "Status",
+          name: "status",
+          widget: "select",
+          options: ["Done", "Pending", "Inception"],
+        }
+      - { label: "Body", name: "body", widget: "markdown" }
