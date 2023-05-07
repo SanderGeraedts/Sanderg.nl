@@ -53,7 +53,7 @@ collections:
       - { label: "Body", name: "body", widget: "markdown" }
   - name: "projects"
     label: "Stuff I made"
-    folder: "src/content/projects"
+    folder: "src/pages/projects"
     create: true
     fields:
       - { label: "Title", name: "title", widget: "string" }
