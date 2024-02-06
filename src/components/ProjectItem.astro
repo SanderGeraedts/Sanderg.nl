@@ -15,18 +15,18 @@ const publishDate = new Date(project.frontmatter.publishDate);
 ---
 
 <article class="projectPreview">
-  <header>
-    <a href={project.url}
-      ><h2 class="title">
-        {project.frontmatter.title} - {project.frontmatter.status}
-      </h2></a
-    >
-    <p class="publishDate">
-      {publishDate.toLocaleDateString("nl-NL", options)}
-    </p>
-  </header>
+  <img src={project.frontmatter.imageUrl} alt={project.frontmatter.title} />
   <main>
-    <img src={project.frontmatter.imageUrl} alt={project.frontmatter.title} />
+    <header>
+      <a href={project.url}
+        ><h2 class="title">
+          {project.frontmatter.title} - {project.frontmatter.status}
+        </h2></a
+      >
+      <p class="publishDate">
+        {publishDate.toLocaleDateString("nl-NL", options)}
+      </p>
+    </header>
     <p>
       {project.frontmatter.description}
     </p>
@@ -34,6 +34,21 @@ const publishDate = new Date(project.frontmatter.publishDate);
 </article>
 
 <style>
+  @media (min-width: 1024px) {
+    .projectPreview {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .projectPreview img {
+      max-width: 20rem;
+    }
+
+    .projectPreview main {
+      width: 100%;
+    }
+  }
   .publishDate {
     font-style: italic;
     margin-top: 0;
