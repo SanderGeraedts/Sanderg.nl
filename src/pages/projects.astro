@@ -4,7 +4,12 @@ import Title from "../components/Title.astro";
 import ProjectItem from "../components/ProjectItem.astro";
 import Wrapper from "../components/Wrapper.astro";
 
-const allProjects = await Astro.glob("./projects/*.md");
+let allProjects = await Astro.glob("./projects/*.md");
+
+allProjects = allProjects.sort(
+  (a, b) =>
+    new Date(b.frontmatter.publishDate) - new Date(a.frontmatter.publishDate)
+);
 ---
 
 <Layout
