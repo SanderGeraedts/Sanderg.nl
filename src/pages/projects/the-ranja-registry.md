@@ -16,5 +16,5 @@ In Home Assistant staat nu op mijn dashboard een counter met het aantal flessen 
 
 ![the Ranja Registry in action](https://res.cloudinary.com/sandergnl/image/upload/c_scale,f_auto,q_auto,w_960/v1708598868/projects/20240613_185732_scytup.jpg)
 
-* Code: https://github.com/SanderGeraedts/ranja-registry/blob/main/code.py
-* Models: WIP
+* Code: [Github](https://github.com/SanderGeraedts/ranja-registry/blob/main/code.py)
+* Models: [Printables](https://www.printables.com/model/912200-the-ranja-registry-home-assistant-inventory-tracke)
