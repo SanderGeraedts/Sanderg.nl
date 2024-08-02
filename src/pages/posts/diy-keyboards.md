@@ -17,6 +17,11 @@ Under Construction
 - Keycaps set
 - Koperdraad (vaste kern, 1.5mm² / 16AWG)
 - Koperdraad (soepele kern, 0.14mm² / 26AWG)
+- USB kabel (met data)
+- Voor split keyboards:
+    - 2de Microcontroller
+    - 2x TRRS port
+    - 1x TRRS kabel
 
 ### Tools
 - Soldeerbout
@@ -24,7 +29,28 @@ Under Construction
 - 3D printer / 3D print service
 - Multimeter
 - Striptang
+- Kniptang
 - Handig om te hebben
-    - Afzuiging
+    - Afzuiging (Een ventilator en een open raam werkt ook)
     - Vergrootglas
     - Pincet
+    - Platbektang
+
+## Stap 1: Design
+
+### Switches
+
+### Layout
+
+### Zelf ontwerpen vs. bestaand ontwerp
+
+### Keycaps
+
+### Printing
+
+## Stap 2: Bouwen
+
+### Matrix vs. Direct
+
+## Stap 3: Firmware
+- POG
