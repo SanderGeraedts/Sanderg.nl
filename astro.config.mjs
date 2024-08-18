@@ -7,4 +7,10 @@ import sitemap from "@astrojs/sitemap";
 export default defineConfig({
   site: "https://sanderg.nl",
   integrations: [mdx(), sitemap()],
+  redirects: {
+    '/md': {
+      status: 301,
+      destination: '/posts/diy-keyboard'
+    }
+  }
 });

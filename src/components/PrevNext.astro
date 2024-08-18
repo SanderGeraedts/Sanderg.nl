@@ -1,0 +1,53 @@
+---
+
+export interface Props {
+  prevText?: string;
+  prevUrl?: string;
+  nextText?: string;
+  nextUrl?: string
+}
+
+const { prevText, prevUrl, nextText, nextUrl } = Astro.props;
+---
+
+<div class="prevnext">
+  {
+    (prevText && prevUrl) && (
+      <div class="prev">
+        <a href={prevUrl}>&lt; {prevText}</a>
+      </div>
+    )
+  }
+  {
+    (nextText && nextUrl) && (
+      <div class="next">
+        <a href={nextUrl}>{nextText} &gt;</a>
+      </div>
+    )
+  }
+</div>
+
+<style>
+  .prevnext {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .next {
+    grid-column-start: 2;
+    text-align: right;
+  }
+
+   @media (max-width: 450px) {
+    .prevnext {
+      grid-template-columns: 100%;
+    }
+
+    .next, .prev {
+    grid-column-start: 1;
+    padding-block: 0.5rem;
+    text-align: center;
+    }
+  }
+</style>
