@@ -11,5 +11,50 @@ import PrevNext from '../../../components/PrevNext.astro'
 In deze stap moeten we nog 1 belangrijke keuze maken: gaan we een matrix of directe verbinding gebruiken voor de toetsen?
 
 ### Matrix vs. Direct
+Bij een directe verbinding sluit je elke toets direct aan op een pin van de microcontroller. Dit betekent dat je evenveel pinnen nodig hebt als er toetsen zijn. Dit is de eenvoudigste manier om een toetsenbord te bouwen, maar het is niet erg schaalbaar. Als je een toetsenbord met 100 toetsen wilt maken, heb je 100 pinnen nodig. Dit is niet praktisch. De Raspberry Pi Pico heeft bijvoorbeeld slechts 26 pinnen, dus je kunt niet meer dan 26 toetsen aansluiten. Dat is prima voor een macropad, maar niet voor een volledig toetsenbord.
 
-<PrevNext prevText="Stap 1: Design" prevUrl="/posts/diy-keyboard/stap-1-design" nextText="Stap 2: Firmware" nextUrl="/posts/diy-keyboard/stap-3-firmware"/>
+Bij een matrix sluit je de toetsen aan op rijen en kolommen. Er is steeds maar 1 toets die dezelfde combinatie van rij en kolom heeft. Dit betekent dat als de microcontroller een signaaltje stuurt op rij A en hij komt terug op kolom B, dat die weet welke toets is ingedrukt. Hierdoor heb je maar 1 pin nodig per rij en 1 per kolom.
+
+Wel heb je voor elke toets een diode nodig. Een diode is in het kort een eenrichtingsweg voor elektriciteit. Hierdoor voorkom je dat een stroomsignaal via ingedrukte toetsen bij verkeerde kolommen terecht komt. Dit is de methode die we in deze post gaan gebruiken, omdat je dit voor elk toetsenbord kan gebruiken.
+
+### Matrix schema
+Om een goed beeld te krijgen van hoe je je matrix moet maken, is het handig om een schema te maken. Hieronder zie je een voorbeeld van een 4 x 6 toetsenbord. Hierdoor heb je sneller een dubbele connectie door voordat je uren aan het zoeken bent waarom je toetsenbord niet werkt. Speaking of experience...
+
+![Matrix schema van een 4 x 6 toetsenbord](https://res.cloudinary.com/sandergnl/image/upload/v1725466653/projects/diy-keyboard/Matrix.png)
+
+Dit hoeft niet heel erg uitgebreid te zijn, zolang je maar weet welke rij of kolom je aan welke pin van de microcontroller wilt aansluiten.
+
+### Voorbereidingen
+Zorg dat je al je onderderdelen hebt klaarliggen, het koperdraad op ongeveer de juiste lengte hebt geknipt en alles binnen handbereik hebt. Je wilt niet halverwege erachter komen dat je nog een onderdeel mist.
+
+### De kolommen
+Zelf begin ik altijd eerst met de kant zonder diodes, wat in dit geval de kolommen zijn.
+
+![toetsenbord met ongesoldeerde kolommen](https://res.cloudinary.com/sandergnl/image/upload/c_scale,f_auto,q_auto,w_1024/v1723974085/projects/diy-keyboard/20240808_172639_fytlxm.jpg)
+
+Begin met de kolommen tussen de rechter pin van de toets en de behuizing van de toets zelf te klemmen. Dit geeft wat meer grip bij het solderen. Knip de niet gebruikte stukken van de koperdraad af, zodat je niet per ongeluk kortsluiting maakt, en niet onnodig extra materiaal op warmt.
+
+Soldeer de koperdraad aan de toetsen vast. Gebruik een soldeerbout van ongeveer 300 °C. Zet je soldeerbout op het koperdraad op zo'n manier dat je ook de pin raakt. Voeg nu de soldeerdraad toe. Als het niet meteen smelt, kan je ook eerst wat soldeer op de soldeerbout doen. Een "natte" soldeerbout geleidt de warmte beter dan een droge. Let erop dat het soldeersel goed gesmolten is. Als het eruit ziet als een klompje tin die op de draad ligt, is het niet goed gesoldeerd. Het moet een gladde verbinding zijn.
+
+![toetsenbord met gesoldeerde kolommen](https://res.cloudinary.com/sandergnl/image/upload/c_scale,f_auto,q_auto,w_1024/v1723974085/projects/diy-keyboard/20240808_180456_gaaqng.jpg)
+
+Het kan zijn dat door de vorm van je toetsenbord je niet overal rechte draden naar toe kan trekken. Dit kan je oplossen door de verbinding met een stuk flexibel draad te maken.
+
+### De rijen
+Nu is het tijd om de rijen te solderen. Dit is hetzelfde proces als de kolommen, maar dan met diodes. Zorg dat de diode in de juiste richting zit. De kant met het streepje moet in de richting van het koperdraad. De kant zonder streepje moet naar de toets toe. **Let op:** Welke kant van de diode je gebruikt maakt niet uit, zolang je maar consequent bent. Als je consistent bent, kan het in de firmware aangepast worden, maar als je soms de ene kant en soms de andere kant gebruikt, werkt het niet.
+
+Om de diodes goed vast te maken, draai ik de diode om een stukje koperdraad heen. Dan heb je een mooi loopje wat je om de pin van de toets kan klemmen. Soldeer de diode vast aan de toets.
+
+![toetsenbord met gesoldeerde diodes](https://res.cloudinary.com/sandergnl/image/upload/c_scale,f_auto,q_auto,w_1024/v1723974084/projects/diy-keyboard/20240809_165557_qvod7d.jpg)
+
+Als je een rij van diodes hebt gesoldeerd, kan je het draad pakken voor de rij. Voordat je deze gaat solderen, moet deze wel op de kruisingen geisoleerd worden. Buig een stuk draad in de juiste vorm. Leg deze dan op de plek waar die ongeveer moet komen. Markeer nu met een stift of paintmarker elke plek waar de draad andere draden kruist. Dit is de plek waar je de draad moet isoleren. Dit kan je doen met een stukje tape of krimpkous. Mijn voorkeur heeft krimpkous, omdat dit beter blijft zitten en er netter uitziet.
+
+![koperdraad met de kruisingen gemarkeerd](https://res.cloudinary.com/sandergnl/image/upload/c_scale,f_auto,q_auto,w_1024/v1723974084/projects/diy-keyboard/20240809_165910_0_ga0nab.jpg)
+
+Als je alle kruisingen geisoleerd hebt, kan je de draad gaan solderen. Leg de draad op de plek waar die moet komen en buig de uiteinden van de diodes er om heen. Soldeer de draad vast aan de diodes.
+
+![koperdraad met de diodes eromheen gebogen](https://res.cloudinary.com/sandergnl/image/upload/c_scale,f_auto,q_auto,w_1024/v1723974085/projects/diy-keyboard/20240809_170403_qvvbxv.jpg)
+
+Knip vervolgens de niet gebruikte stukken van de draad en van de diodes af.
+
+<PrevNext prevText="Stap 1: Design" prevUrl="/posts/diy-keyboard/stap-1-design" nextText="Stap 3: Firmware" nextUrl="/posts/diy-keyboard/stap-3-firmware"/>
