@@ -18,7 +18,7 @@ Bij een matrix sluit je de toetsen aan op rijen en kolommen. Er is steeds maar 1
 Wel heb je voor elke toets een diode nodig. Een diode is in het kort een eenrichtingsweg voor elektriciteit. Hierdoor voorkom je dat een stroomsignaal via ingedrukte toetsen bij verkeerde kolommen terecht komt. Dit is de methode die we in deze post gaan gebruiken, omdat je dit voor elk toetsenbord kan gebruiken.
 
 ### Matrix schema
-Om een goed beeld te krijgen van hoe je je matrix moet maken, is het handig om een schema te maken. Hieronder zie je een voorbeeld van een 4 x 6 toetsenbord. Hierdoor heb je sneller een dubbele connectie door voordat je uren aan het zoeken bent waarom je toetsenbord niet werkt. Speaking of experience...
+Om een goed beeld te krijgen van hoe je je matrix moet maken, is het handig om een schema te maken. Hieronder zie je een voorbeeld van een 4 x 6 toetsenbord. Hierdoor heb je sneller een dubbele connectie door voordat je uren aan het zoeken bent waarom je toetsenbord niet werkt. Speaking from experience...
 
 ![Matrix schema van een 4 x 6 toetsenbord](https://res.cloudinary.com/sandergnl/image/upload/v1725466653/projects/diy-keyboard/Matrix.png)
 
@@ -56,5 +56,27 @@ Als je alle kruisingen geisoleerd hebt, kan je de draad gaan solderen. Leg de dr
 ![koperdraad met de diodes eromheen gebogen](https://res.cloudinary.com/sandergnl/image/upload/c_scale,f_auto,q_auto,w_1024/v1723974085/projects/diy-keyboard/20240809_170403_qvvbxv.jpg)
 
 Knip vervolgens de niet gebruikte stukken van de draad en van de diodes af.
+
+### Naar de microcontroller
+Nu is het tijd om de draden naar de microcontroller te solderen. Hiervoor gebruik je flexibele draad. Elke rij en elke kolom moet naar een pin van de microcontroller. Zorg dat je de draden niet te kort maakt, want dan kan je de microcontroller niet meer in de behuizing plaatsen. Zorg ook dat je de draden niet te lang maakt, want dan kan je de behuizing niet meer dicht doen. Hou hiervoor je matrix schema bij de hand als je die hebt gemaakt.
+
+![flexibel draad onder koperdraad](https://res.cloudinary.com/sandergnl/image/upload/c_scale,f_auto,q_auto,w_1024/v1723974223/projects/diy-keyboard/20240811_120711_ef8n5s.jpg)
+
+Strip een centimeter of 2, 3 van de kabel en wikkel het om de koperdraad zodat je een stevige verbinding krijgt.
+
+![flexibel draad om koperdraad gewikkeld](https://res.cloudinary.com/sandergnl/image/upload/c_scale,f_auto,q_auto,w_1024/v1723974085/projects/diy-keyboard/20240811_120808_1_dqrtoe.jpg)
+
+Soldeer de draad nu vast en knip het uitsteeksel af. **Tip:** Zorg dat je het uitstekende stukje ook een beetje soldeert. Als je het dan af knipt, blijven de losse draadjes bij elkaar en kan je het makkelijker weggooien.
+
+![flexibel draad gesoldeerd](https://res.cloudinary.com/sandergnl/image/upload/c_scale,f_auto,q_auto,w_1024/v1723974085/projects/diy-keyboard/20240811_121025_i1dcbt.jpg)
+
+Route nu de draden naar de microcontroller. Een tip om dit netter te doen is om de draden onder de rijen en kolommen door te laten lopen. Dit zorgt ervoor dat je draden niet overal heen gaan en dat je makkelijker de microcontroller in de behuizing kan plaatsen.
+
+![flexibel draad naar de microcontroller](https://res.cloudinary.com/sandergnl/image/upload/c_scale,f_auto,q_auto,w_1024/v1723974085/projects/diy-keyboard/20240811_122206_phldwg.jpg)
+
+Strip een paar milimeter van het draad, doe eerst wat soldeer op de pin van de microcontroller en op het uiteinden van de kabel. Nu kan je het draad bij de pin houden, je soldeerbout erop zetten en zit het vast. Hou rekening met de volgorde van je matrix schema.
+
+### Testen
+Nu het soldeerwerk klaar is, is het verstandig om te checken of je ergens kortsluiting hebt gemaakt. Dit kan je doen door met een multimeter de continuïteit te meten tussen de rijen en kolommen. Spendeer hier niet al te lang aan, je gaat het sowieso nog een keer testen als je de firmware gaat schrijven.
 
 <PrevNext prevText="Stap 1: Design" prevUrl="/posts/diy-keyboard/stap-1-design" nextText="Stap 3: Firmware" nextUrl="/posts/diy-keyboard/stap-3-firmware"/>
