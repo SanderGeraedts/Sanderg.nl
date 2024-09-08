@@ -1,0 +1,68 @@
+---
+title: "Bouw je eigen keyboard - Stap 3: Firmware"
+permalink: /posts/diy-keyboard/stap-3-firmware
+description: Bouw je eigen toetsenbord.
+publishDate: 2024-09-08T12:00:00.215Z
+layout: ../../../layouts/blog-layout.astro
+---
+import PrevNext from '../../../components/PrevNext.astro'
+
+Er zijn veel verschillende tools voor het maken van een keyboard firmware. De meest bekende is QMK, maar zelf ben ik hier geen fan van omdat het erg complex is. Ik gebruik zelf liever KMK. Dit is een keyboard firmware library op basis van CircuitPython. Het is makkelijker te begrijpen en te gebruiken dan QMK, wat in C geschreven is.
+
+De voornaamste reden om KMK te gebruiken is voor mij dat je gebruik kan maken van POG. POG is een UI tool waarmee je je firmware kan maken. Je kan hiermee je toetsenbord layout maken en de firmware genereren. Hierdoor hoef je zelf geen code te schrijven.
+
+## Microcontroller aan je PC aansluiten
+Om de firmware op je microcontroller te zetten, moet je deze aansluiten op je PC. Als je de microcontroller aansluit, moet je hem in bootloader mode zetten. Dit kan je doen door de reset knop in te drukken en vast te houden terwijl je de USB-C kabel aansluit. Als je de reset knop loslaat, zou de microcontroller in bootloader mode moeten staan. Dit kan verschillen per microcontroller, dus kijk even in de documentatie van je microcontroller.
+
+## CircuitPython installeren
+Om KMK / POG te kunnen gebruiken, moet je CircuitPython op je microcontroller installeren. Dit kan je doen door de laatste versie van CircuitPython te downloaden van de [CircuitPython website](https://circuitpython.org/downloads). Pak het bestand uit en kopieer de bestanden naar de microcontroller. Als je dit gedaan hebt, zou je een USB drive moeten zien met de naam `CIRCUITPY`.
+
+## POG installeren
+POG moet je downloaden van deze site: [POG](https://pog.heaper.de/). Hier wordt je door gelinkt naar de laatste versie van POG (Als je recent naar schrijven op deze pagina komt, zie je mogelijk een bekende naam bij de release notes staan). Download de juiste versie voor je besturingssysteem en installeer het programma.
+
+## Firmware maken
+Jan Lunge, degene die POG heeft bedacht, heeft een [tutorial](https://www.youtube.com/watch?v=RtYJYFMWjNM) gemaakt over hoe je POG kan gebruiken. Hierin legt hij uit hoe je een layout kan maken en hoe je de firmware kan genereren. Ik raad aan om deze tutorial te volgen.
+
+Het is een redelijk simpel proces. Wanneer je POG opstart, wordt je gevraagd om een nieuw toetsenbord aan te maken. Klik op de knop en selecteer de drive van je microcontroller. 
+
+![POG](https://res.cloudinary.com/sandergnl/image/upload/c_scale,f_auto,q_auto,w_1024/v1725786537/projects/diy-keyboard/8a0c2406-54c7-4c2b-8e12-8bc0f0d9f4d6.png)
+
+Vervolgens kan je POG KMK automatisch laten installeren. Dit zorgt ervoor dat je altijd de juiste versie van KMK hebt die getest is met POG.
+
+![KMK installeren](https://res.cloudinary.com/sandergnl/image/upload/c_scale,f_auto,q_auto,w_1024/v1725786618/projects/diy-keyboard/f9b02994-c14d-4484-ad90-da7f2e36adf7.png)
+
+Daarna wordt je gevraagd om een naam te kiezen voor je toetsenbord. Alleen de naam is hier belangrijk, de rest is optioneel.
+
+![Toetsenbord naam](https://res.cloudinary.com/sandergnl/image/upload/c_scale,f_auto,q_auto,w_1024/v1725786686/projects/diy-keyboard/52a07511-2951-4396-83b9-c03a8ecaa96f.png)
+
+Nu kan moet je je matrix definiëren. Als je een gesplitst toetsenbord maakt, moet je hier bij Keyboard Type dat aangeven. Je hoeft dan ook maar een helft aan te geven voor de matrix width. POG verdubbelt dit dan voor je.
+
+![Matrix definiëren](https://res.cloudinary.com/sandergnl/image/upload/c_scale,f_auto,q_auto,w_1024/v1725786712/projects/diy-keyboard/c0cf61d0-7a5a-4dc6-934c-98948e56c669.png)
+
+In de volgende stap moet je aangeven welke pins je hebt gebruikt voor je kolommen en rijen. Dit is waar je matrix schema van pas komt. Ook moet je je Diode Direction aangeven. Dit is de kant waar de streepjes van de diodes naartoe wijzen. COL2ROW gebruik je als je diodes van de kolommen naar de rijen lopen. ROW2COL gebruik je als je diodes van de rijen naar de kolommen lopen. Het streepje van de diode wijst de kant aan. 
+
+![Kolommen en rijen](https://res.cloudinary.com/sandergnl/image/upload/c_scale,f_auto,q_auto,w_1024/v1725786778/projects/diy-keyboard/9dc3938e-0417-425c-bf8c-5a2a555dda08.png)
+
+Dan kom je aan bij het meest ideale deel van POG: coord mapper. Hiermee wordt je layout gegenereerd door het indrukken van de toetsen op je toetsenbord. Eerst druk je op de grote "Flash coordmap finder to keyboard" knop. Hiermee wordt je toetsenbord in een soort test mode gezet. Druk nu op elke toets op je toetsenbord. Wanneer je nu op een knop drukt, vult POG het coordinaat in. Het kan zijn dat je de kabel van je toetsenbord er even uit moet trekken en weer in stoppen voor het werkt. Begin met de linker toets van de bovenste rij. Als je hier op drukt, verschijnt er als het goed is "000" in het invoerveld. Het exacte getal maakt minder uit, zolang er maar 3 cijfers verschijnen. Druk nu op de volgende toets en ga door tot je alle toetsen in de rij hebt gehad. De laatste toets in de rij druk je 2x in, zodat de cursor naar de volgende rij gaat. Als een knop niks invult, is die waarschijnlijk niet goed vast gesoldeerd en moet je kijken waar de fout zit.
+
+![Coord mapper](https://res.cloudinary.com/sandergnl/image/upload/c_scale,f_auto,q_auto,w_1024/v1725786873/projects/diy-keyboard/a6faec95-db8a-4344-987d-1a0469322c80.png)
+
+Zodra elke toets is geregistreerd, druk je op Next om naar de Layout editor te gaan. Hier kan je je coordmap omzetten naar een layout die meer lijkt op je daadwerkelijke toetsenbord. Dit is allemaal puur visueel, dus je kan deze stap overslaan, of helemaal los gaan met je layout.
+
+![Layout editor](https://res.cloudinary.com/sandergnl/image/upload/c_scale,f_auto,q_auto,w_1024/v1725787032/projects/diy-keyboard/65155789-ebd7-4c50-906a-935f5dc305fa.png)
+
+Als je klaar bent met je layout, druk je op Finish Setup. Dan kom je uit bij de Keymap Editor. Hier kan je je toetsen programmeren. Door lagen toe te voegen, kan je met dezelfde knop meerdere functies hebben. Dit is handig voor bijvoorbeeld een numpad laag of een media laag. Vergeet niet op de Save knop te drukken als je klaar bent.
+
+![Keymap editor](https://res.cloudinary.com/sandergnl/image/upload/c_scale,f_auto,q_auto,w_1024/v1725787125/projects/diy-keyboard/20faf2cf-3e3e-4ae6-b33e-8655220ea467.png)
+
+Nu is je toetsenbord eigenlijk al klaar, maar er is nog een ding dat we moeten aanpassen. Als je je toetsenbord aansluit op je PC, wordt deze herkend als een USB drive. Dit is niet handig, want je wilt dat je toetsenbord als toetsenbord herkend wordt. Dit kan je op de standaard KMK methode doen, met een `boot.py` bestand, maar POG heeft hier een eigen manier voor.
+
+Er is namelijk een `customkey` functie genaamd `ToggleDrive`. Deze voeg je toe aan je keymap, en zodra je een keer op die knop drukt, wordt je toetsenbord niet meer als USB drive herkend. Als je nog een keer op die knop drukt, wordt je toetsenbord weer als USB drive herkend. Dit is nodig omdat je anders je firmware niet kan updaten.
+
+Om deze toe te voegen, klik je op een lege plek in je keymap, en vervolgens onder "Keycode Options for Selected Key(s)" selecteer je Custom. Nu vul je hier `customkeys.ToggleDrive` in. 
+
+![ToggleDrive](https://res.cloudinary.com/sandergnl/image/upload/c_scale,f_auto,q_auto,w_1024/v1725787523/projects/diy-keyboard/Screenshot_2024-09-08_112432_bdu22d.png)
+
+Gefeliciteerd! Je hebt nu je eigen toetsenbord gemaakt. Als je nog vragen hebt, kan je altijd terecht op de [POG Discord](https://discord.com/invite/ctYr5BVF7b).
+
+<PrevNext prevText="Stap 2: Bouwen" prevUrl="/posts/diy-keyboard/stap-2-bouwen"/>

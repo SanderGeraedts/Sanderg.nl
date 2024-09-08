@@ -5,7 +5,7 @@ import BlogItem from "../components/BlogItem.astro";
 import Wrapper from "../components/Wrapper.astro";
 
 // Data Fetching: List all Markdown posts in the repo.
-let allPosts = await Astro.glob("../pages/posts/*.md");
+let allPosts = await Astro.glob("../pages/posts/*.md*");
 
 allPosts = allPosts.sort(
   (a, b) =>
